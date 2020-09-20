@@ -1,0 +1,35 @@
+//
+//  ClubFinderViewController.swift
+//  ClubFinder
+//
+//  Created by Yrua Riley on 9/19/20.
+//  Copyright © 2020 yrua. All rights reserved.
+//
+
+import UIKit
+
+class ClubFinderViewController: UIViewController {
+
+  @IBOutlet var clubs: UIButton!
+  @IBOutlet var network: UIButton!
+  @IBOutlet var Calendar: UIButton!
+  
+  
+  override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
