@@ -4,10 +4,10 @@ Club Finder is an app that will allow students to locate and keep track of stude
 
 
 ### User Stories
-Student sees a list of three options
-Student can navigate to a clubs, network, or calendar page
-Student can see club information 
-Student can add club meeting dates to calendar
+[]Student sees a list of three options
+[]Student can navigate to a clubs, network, or calendar page
+[]Student can see club information 
+[]Student can add club meeting dates to calendar
 
 
 ### App Walkthrough GIF
