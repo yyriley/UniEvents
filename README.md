@@ -1,7 +1,7 @@
-Original App Design Project - README Template
+Original App Design Project - README
 ===
 
-# APP_NAME_HERE
+# UniEvents
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -20,62 +20,72 @@ Allow student organizations to create events and post meeting information. Conne
 - **Category:Educational**
 - **Mobile:???**
 - **Story:**
-- **Market:Students**
+- **Market:University Students**
 - **Habit: Students can connect to others and post comments**
 - **Scope:**
 
 ## Product Spec
 
 ### 1. User Stories (Required and Optional)
-
-
-
 * User can log in/log out
-* User can create/Read for events associated with a school and a club
+* User can register as student
+* User can see the clubs they belong to 
+* User can create/read events associated with a school or student org
 * User can view every event past/future
 
-
+### Optional User Stories
 * User will see old events greyed out
 * User can see/subscribe to events specific to club
 * Users can be assigned as leaders for club (admin)
-* User can view calendar of events
-* User can add events to calendar if they are admin
 * User can comment on posts
 * User can send DMs
 * User can assign admins positions is they are club president/vice
 * User can upload an image associated with an event/club if admin?
 
-
 ### 2. Screen Archetypes
-
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
-
+* Login
+    * User can log in/log out
+* Registration 
+   * User can register as student 
+   * User can assign admins positions is they are club president/vice
+* Stream
+    * User can see all events in chronological order 
+* Profile
+    * User can see the clubs they belong to 
+* Create
+    * User can subscribe to events specific to club
+    * User can create events associated with a school or student org
+    * User can comment on posts
+    * User can send DMs
+    * User can upload an image associated with an event/club if admin?
+* Details
+    * User can see to events specific to club
+    * User can view every event past/future
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* Login/Sign up screen
 * Student home page
 * Student calendar
-* Events page
+* Event calendar
 * Organization page
 
 **Flow Navigation** (Screen to Screen)
 
-* Login/Sign up screen
-   * [list screen navigation here]
-   * ...
-* Student home page
-   * [list screen navigation here]
-   * ...
-* Student calendar
-* Events page
-* Organization page
+* Login
+    * Stream
+    * Home feed
+* Registration
+    * Stream 
+    * Home feed
+* Stream
+    * Event details
+* Calendar
+    * Profile
+* Create
+    * Details
+* Details
+    * 
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
