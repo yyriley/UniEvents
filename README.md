@@ -16,13 +16,12 @@ Information hub of organizations events/meetings in a specific univeristy/colleg
 Allow student organizations to create events and post meeting information. Connect students to their peers and allow them to custom their student calendar by adding events that fit their schedule. 
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
-- **Category:Educational**
-- **Mobile:???**
-- **Story:**
-- **Market:University Students**
+- **Category: Educational**
+- **Mobile: On the go access for students**
+- **Story: With so many organizations to choose from, it is difficult to      find inforamtion regarding events/meetings. This app will hopefully allow students to gather/access information regarding student organizations all in one place**
+- **Market: University Students**
 - **Habit: Students can connect to others and post comments**
-- **Scope:**
+- **Scope: ??? Students in all Universities/Colleges**
 
 ## Product Spec
 
@@ -41,6 +40,7 @@ Allow student organizations to create events and post meeting information. Conne
 * User can send DMs
 * User can assign admins positions is they are club president/vice
 * User can upload an image associated with an event/club if admin?
+* User can search for organizations/events
 
 ### 2. Screen Archetypes
 * Login
@@ -48,16 +48,17 @@ Allow student organizations to create events and post meeting information. Conne
 * Registration 
    * User can register as student 
    * User can assign admins positions is they are club president/vice
-* Stream
+* Feed
     * User can see all events in chronological order 
 * Profile
-    * User can see the clubs they belong to 
+    * User can see the clubs they belong to
+    * User profile info is gated based on other user's permission 
+    * User profile info is available to user themselves
 * Create
     * User can subscribe to events specific to club
     * User can create events associated with a school or student org
     * User can comment on posts
-    * User can send DMs
-    * User can upload an image associated with an event/club if admin?
+    * User can RSVP to different events
 * Details
     * User can see to events specific to club
     * User can view every event past/future
@@ -65,27 +66,24 @@ Allow student organizations to create events and post meeting information. Conne
 
 **Tab Navigation** (Tab to Screen)
 
-* Student home page
-* Student calendar
-* Event calendar
+* Home page
+* Profile
+* Club Directory
+* Saved Events
+* Student calendar/Event calendar
 * Organization page
+
 
 **Flow Navigation** (Screen to Screen)
 
-* Login
-    * Stream
+* Login/Registration
     * Home feed
-* Registration
-    * Stream 
+* Home Tabs
     * Home feed
-* Stream
-    * Event details
-* Calendar
+* Event details
+    * Calendar
     * Profile
-* Create
-    * Details
-* Details
-    * 
+    * Organization Page
 
 ## Wireframes
 <img src="images/home_screen_wireframe.jpg" width=600>
