@@ -117,9 +117,9 @@ Allows students and student leaders of clubs and organizations to create events 
 ## Wireframes
 <img src="images/tab_bar_wireframes.png" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
+<!-- ### [BONUS] Digital Wireframes & Mockups -->
 
-### [BONUS] Interactive Prototype
+<!-- ### [BONUS] Interactive Prototype -->
 
 ## Schema 
 ### Models
