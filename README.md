@@ -93,9 +93,22 @@ Allow student organizations to create events and post meeting information. Conne
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+#### Event
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the event post (default field) |
+   | name          | String   | name of the event |
+   | author        | Pointer to User| user that created the event |
+   | image         | File     | image that user posts |
+   | description   | String   | description of the event |
+   | commentsCount | Number   | number of comments that have been posted |
+   | likesCount    | Number   | number of likes for the post |
+   | startTime     | DateTime | time when event starts |
+   | endTime       | DateTime | time when event ends |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
