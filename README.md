@@ -40,6 +40,7 @@ Allows students and student leaders of clubs and organizations to create events 
 * User can upload an image associated with an event if they are admin
 * User can upload an image associated with a club if they are admin
 * User is notified of upcoming events
+* User can search for organizations/events
 
 ### 2. Screen Archetypes
 * Login
@@ -99,6 +100,7 @@ Allows students and student leaders of clubs and organizations to create events 
     * Event Details
 * Saved Events
     * Event Details
+    * Calendar
 * Profile/Hosting
     * Club Details
     * Event Details
