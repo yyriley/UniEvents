@@ -1,6 +1,3 @@
-Original App Design Project - README
-===
-
 # UniEvents
 
 ## Table of Contents
@@ -13,7 +10,7 @@ Original App Design Project - README
 Information hub of organizations events/meetings in a specific univeristy/college.
 
 ### Description
-Allow student organizations to create events and post meeting information. Connect students to their peers and allow them to custom their student calendar by adding events that fit their schedule. 
+Allows students and student leaders of clubs and organizations to create events and post meeting information. Connects students to their peers with similar interests and allows them to find events that fit their schedule and save them to a calendar.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
@@ -35,19 +32,16 @@ Allow student organizations to create events and post meeting information. Conne
 
 ### Optional User Stories
 * User will see old events greyed out
-* User can see/subscribe to events specific to club
-* Users can be assigned as leaders for club (admin)
+* User can view events specific to club
+* User can subscribe to events specific to club
+* User can be assigned as a leaders for a club (admin)
 * User can comment on posts
-* User can send DMs
-* User can assign admins positions is they are club president/vice
-* User can upload an image associated with an event/club if admin?
+* User can assign admins positions is they are admin
+* User can upload an image associated with an event if they are admin
+* User can upload an image associated with a club if they are admin
+* User is notified of upcoming events
 
 ### 2. Screen Archetypes
-* Profile
-    * User can view the clubs they belong to 
-    * User can view the clubs they are an admin in
-    * User can view their profile image
-    * User can view their username
 * Login
     * User can log in/log out
 * Registration 
@@ -58,9 +52,7 @@ Allow student organizations to create events and post meeting information. Conne
 * Saved Events
     * User can view all events they have saved (as a list) in chronological order
     * User can comment on event posts
-* Student Calendar 
-    * User can view all saved events in a calendar format
-
+    * User can toggle saved events to be viewed in a calendar format or list format
 * Hosting
     * User can view the events they are hosting
     * User can create an event
@@ -77,25 +69,28 @@ Allow student organizations to create events and post meeting information. Conne
     * User can turn off comments if they are an admin
 * Clubs Page
     * User can view all the clubs at their school
+    * User can join clubs
 * Club Details
     * User can view all events (past/future) specific to a club
-    * User can subscribe to events specific to club
+    * User can join club to subscribe to club events
     * User can contact club admin
     * User can assign admin positions if they are an admin
-
+* Profile
+    * User can view their profile image
+    * User can view their username
+    * User can view the clubs they belong to 
+    * User can view the clubs they are an admin in
+    * User can unjoin clubs they belong to
+    
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
-
 * Home
 * Clubs Page
 * Saved Events
-* Student Calendar
 * Hosting
-* Profile
 
 **Flow Navigation** (Screen to Screen)
-
 * Login
     * Home
 * Registration
@@ -103,8 +98,6 @@ Allow student organizations to create events and post meeting information. Conne
 * Home
     * Event Details
 * Saved Events
-    * Event Details
-* Student Calendar
     * Event Details
 * Hosting
     * Create Event
