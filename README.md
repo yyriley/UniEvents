@@ -165,7 +165,7 @@ Allows students and student leaders of clubs and organizations to create events 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | objectId      | String   | unique id for the club member (default field) |
-   | user          | Pointer to User | user that is a memeber |
+   | user          | Pointer to User | user that is a member |
    | isAdmin       | Boolean  | if member can create event posts for club |
    | createdAt     | DateTime | date when user is made a member (default field) |
    
