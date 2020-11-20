@@ -117,14 +117,58 @@ Allows students and student leaders of clubs and organizations to create events 
 ## Wireframes
 <img src="images/tab_bar_wireframes.png" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
+<!-- ### [BONUS] Digital Wireframes & Mockups -->
 
-### [BONUS] Interactive Prototype
+<!-- ### [BONUS] Interactive Prototype -->
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+#### Event
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the event post (default field) |
+   | name          | String   | name of the event |
+   | author        | Pointer to User | user that created the event |
+   | image         | File     | image for the event |
+   | description   | String   | description of the event |
+   | commentsCount | Number   | number of comments that have been posted for the event |
+   | likesCount    | Number   | number of likes for the event post |
+   | startTime     | DateTime | time when event starts |
+   | endTime       | DateTime | time when event ends |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
+   | link          | String   | URL for external event page |
+
+#### User
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user (default field) |
+   | username      | String   | username associated with email |
+   | firstName     | String   | first name of the user |
+   | lastName      | String   | last name of the user |
+   | image         | File     | profile image for the user |
+   | email         | String   | school email used to sign up |
+   | school        | String   | school provided in email address |
+
+#### Club
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the club (default field) |
+   | name          | String   | name of the club |
+   | description   | String   | description of the club |
+   | logo          | File     | club logo |
+   | image         | File     | background image for club page |
+   | email         | String   | club email |
+   | school        | String   | school club belongs to |
+
+#### Member
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the club member (default field) |
+   | user          | Pointer to User | user that is a member |
+   | isAdmin       | Boolean  | if member can create event posts for the club |
+   | createdAt     | DateTime | date when user is made a member (default field) |
+   
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
