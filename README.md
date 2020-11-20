@@ -88,7 +88,7 @@ Allows students and student leaders of clubs and organizations to create events 
 * Home
 * Clubs Page
 * Saved Events
-* Hosting
+* Profile/Hosting
 
 **Flow Navigation** (Screen to Screen)
 * Login
@@ -99,10 +99,10 @@ Allows students and student leaders of clubs and organizations to create events 
     * Event Details
 * Saved Events
     * Event Details
-* Hosting
-    * Create Event
-* Profile
+* Profile/Hosting
     * Club Details
+    * Event Details
+    * Create Event
 * Clubs Page
     * Club Details
 * Create Event
@@ -113,7 +113,7 @@ Allows students and student leaders of clubs and organizations to create events 
     * Club Details
 
 ## Wireframes
-<img src="images/home_screen_wireframe.jpg" width=600>
+<img src="images/tab_bar_wireframes.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
