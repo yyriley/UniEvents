@@ -107,8 +107,6 @@ Allows students and student leaders of clubs and organizations to create events 
     * Create Event
 * Clubs Page
     * Club Details
-* Create Event
-    * Event Details
 * Club Details
     * Event Details
 * Event Details
@@ -170,6 +168,38 @@ Allows students and student leaders of clubs and organizations to create events 
    | createdAt     | DateTime | date when user is made a member (default field) |
    
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+   - Home Feed Screen
+      - (Read/GET) Query all events at user's school
+         ```swift
+         let query = PFQuery(className:"Event")
+         query.whereKey("school", equalTo: currentSchool)
+         query.order(byDescending: "startTime")
+         query.findObjectsInBackground { (events: [PFObject]?, error: Error?) in
+            if let error = error { 
+               print(error.localizedDescription)
+            } else if let posts = posts {
+               print("Successfully retrieved \(events.count) events.")
+           // TODO: Do something with events...
+            }
+         }
+         ```
+   - Login
+      - (Read/GET) Query user object
+   - Registration
+      - (Create/POST) Create a new user object
+   - Saved Events
+      - (Read/GET) Query all events user has saved
+   - Event Details
+      - (Read/GET) Query event object
+   - Club Details
+      - (Update/PUT) Update club details
+      - (Create/POST) Create a new event object
+      - (Update/PUT) Update an event object
+   - Profile/Hosting
+      - (Read/GET) Query logged in user object
+      - (Read/GET) Query all events user is hosting
+      - (Create/POST) Create a new event object
+   - Clubs Page
+      - (Read/GET) Query all clubs at user's school
+
+<!-- - [Create basic snippets for each Parse network request] -->
