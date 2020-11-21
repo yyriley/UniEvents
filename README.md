@@ -127,6 +127,7 @@ Allows students and student leaders of clubs and organizations to create events 
    | objectId      | String   | unique id for the event post (default field) |
    | name          | String   | name of the event |
    | author        | Pointer to User | user that created the event |
+   | school        | Pointer to School | school event belongs to |
    | image         | File     | image for the event |
    | description   | String   | description of the event |
    | commentsCount | Number   | number of comments that have been posted for the event |
@@ -146,7 +147,7 @@ Allows students and student leaders of clubs and organizations to create events 
    | lastName      | String   | last name of the user |
    | image         | File     | profile image for the user |
    | email         | String   | school email used to sign up |
-   | school        | String   | school provided in email address |
+   | school        | Pointer to School | school user belongs to |
 
 #### Club
    | Property      | Type     | Description |
@@ -157,7 +158,17 @@ Allows students and student leaders of clubs and organizations to create events 
    | logo          | File     | club logo |
    | image         | File     | background image for club page |
    | email         | String   | club email |
-   | school        | String   | school club belongs to |
+   | school        | Pointer to School | school club belongs to |
+
+#### School
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the school (default field) |
+   | name          | String   | name of the school |
+   | description   | String   | description of the school |
+   | logo          | File     | school logo |
+   | image         | File     | school background image for student profile page |
+   | email         | String   | school email |
 
 #### Member
    | Property      | Type     | Description |
