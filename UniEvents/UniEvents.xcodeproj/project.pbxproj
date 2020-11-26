@@ -138,10 +138,10 @@
 			children = (
 				6A5A88A72568B0D3008F9ED7 /* AppDelegate.swift */,
 				6A5A88A92568B0D3008F9ED7 /* SceneDelegate.swift */,
-				CD74FD012570642C00617193 /* Constants.swift */,
 				CD74FCF3257061F300617193 /* Controllers */,
 				CD74FCE9257061DC00617193 /* Storyboards */,
 				6A5A88B02568B0D4008F9ED7 /* Assets.xcassets */,
+				CD74FD012570642C00617193 /* Constants.swift */,
 				6A5A88B52568B0D4008F9ED7 /* Info.plist */,
 			);
 			path = UniEvents;
