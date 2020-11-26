@@ -23,24 +23,25 @@ Allows students and student leaders of clubs and organizations to create events 
 
 ## Product Spec
 
-### 1. User Stories (Required and Optional)
-* User can log in/log out
-* User can register as student
-* User can see the clubs they belong to 
-* User can create/read events associated with a school or student org
-* User can view every event past/future
+### 1. User Stories
+## Core features
+- [] User can log in/log out
+- [] User can register as student
+- [] User can see the clubs they belong to 
+- [] User can create/read events associated with a school or student org
+- [] User can view every event past/future
 
-### Optional User Stories
-* User will see old events greyed out
-* User can view events specific to club
-* User can subscribe to events specific to club
-* User can be assigned as a leaders for a club (admin)
-* User can comment on posts
-* User can assign admins positions is they are admin
-* User can upload an image associated with an event if they are admin
-* User can upload an image associated with a club if they are admin
-* User is notified of upcoming events
-* User can search for organizations/events
+## Additional features
+- [] User will see old events greyed out
+- [] User can view events specific to club
+- [] User can subscribe to events specific to club
+- [] User can be assigned as a leaders for a club (admin)
+- [] User can comment on posts
+- [] User can assign admins positions is they are admin
+- [] User can upload an image associated with an event if they are admin
+- [] User can upload an image associated with a club if they are admin
+- [] User is notified of upcoming events
+- [] User can search for organizations/events
 
 ### 2. Screen Archetypes
 * Login
