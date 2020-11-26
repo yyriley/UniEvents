@@ -24,14 +24,14 @@ Allows students and student leaders of clubs and organizations to create events 
 ## Product Spec
 
 ### 1. User Stories
-## Core features
+#### Core features
 - [] User can log in/log out
 - [] User can register as student
 - [] User can see the clubs they belong to 
 - [] User can create/read events associated with a school or student org
 - [] User can view every event past/future
 
-## Additional features
+#### Additional features
 - [] User will see old events greyed out
 - [] User can view events specific to club
 - [] User can subscribe to events specific to club
