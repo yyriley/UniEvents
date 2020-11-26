@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29E3B45396891703DA04D47D /* Pods_UniEvents_UniEventsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153B538D7F940E0FE408A0E7 /* Pods_UniEvents_UniEventsUITests.framework */; };
 		6A5A88A82568B0D3008F9ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A88A72568B0D3008F9ED7 /* AppDelegate.swift */; };
 		6A5A88AA2568B0D3008F9ED7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A88A92568B0D3008F9ED7 /* SceneDelegate.swift */; };
 		6A5A88AC2568B0D3008F9ED7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A88AB2568B0D3008F9ED7 /* LoginViewController.swift */; };
@@ -16,6 +17,10 @@
 		6A5A88BF2568B0D4008F9ED7 /* UniEventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A88BE2568B0D4008F9ED7 /* UniEventsTests.swift */; };
 		6A5A88CA2568B0D5008F9ED7 /* UniEventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A88C92568B0D5008F9ED7 /* UniEventsUITests.swift */; };
 		6A5A88DB2568B16C008F9ED7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6A5A88DA2568B16C008F9ED7 /* .gitignore */; };
+		8FC43C49DB023DB3AA6EA1B3 /* Pods_UniEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D100F41DF05FE41788D69F13 /* Pods_UniEvents.framework */; };
+		CD74FCFD2570622200617193 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD74FCFC2570622200617193 /* HomeViewController.swift */; };
+		CD74FD022570642C00617193 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD74FD012570642C00617193 /* Constants.swift */; };
+		F7828CB1BA541977BCF9C48B /* Pods_UniEventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B607ED273EAA0919CBC7D0 /* Pods_UniEventsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1121A2014934EC6DEACECE5F /* Pods-UniEventsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEventsTests.release.xcconfig"; path = "Target Support Files/Pods-UniEventsTests/Pods-UniEventsTests.release.xcconfig"; sourceTree = "<group>"; };
+		153B538D7F940E0FE408A0E7 /* Pods_UniEvents_UniEventsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniEvents_UniEventsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F7B7C4A504DD3EFCC9ACC65 /* Pods-UniEventsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEventsTests.debug.xcconfig"; path = "Target Support Files/Pods-UniEventsTests/Pods-UniEventsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A5A88A42568B0D3008F9ED7 /* UniEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5A88A72568B0D3008F9ED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A5A88A92568B0D3008F9ED7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,14 @@
 		6A5A88C92568B0D5008F9ED7 /* UniEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniEventsUITests.swift; sourceTree = "<group>"; };
 		6A5A88CB2568B0D5008F9ED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A5A88DA2568B16C008F9ED7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		9DCAD232C3AA426A82F163D0 /* Pods-UniEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEvents.debug.xcconfig"; path = "Target Support Files/Pods-UniEvents/Pods-UniEvents.debug.xcconfig"; sourceTree = "<group>"; };
+		CD74FCFC2570622200617193 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CD74FD012570642C00617193 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CFFB86488CE1E2E3F599CAD6 /* Pods-UniEvents-UniEventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEvents-UniEventsUITests.release.xcconfig"; path = "Target Support Files/Pods-UniEvents-UniEventsUITests/Pods-UniEvents-UniEventsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D100F41DF05FE41788D69F13 /* Pods_UniEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D583A3379D84EE00853084E0 /* Pods-UniEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEvents.release.xcconfig"; path = "Target Support Files/Pods-UniEvents/Pods-UniEvents.release.xcconfig"; sourceTree = "<group>"; };
+		D63A01E18F2A3874A3596935 /* Pods-UniEvents-UniEventsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEvents-UniEventsUITests.debug.xcconfig"; path = "Target Support Files/Pods-UniEvents-UniEventsUITests/Pods-UniEvents-UniEventsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F4B607ED273EAA0919CBC7D0 /* Pods_UniEventsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniEventsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC43C49DB023DB3AA6EA1B3 /* Pods_UniEvents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7828CB1BA541977BCF9C48B /* Pods_UniEventsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +90,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29E3B45396891703DA04D47D /* Pods_UniEvents_UniEventsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64C1D7547F75CF6C5E6E9BF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DCAD232C3AA426A82F163D0 /* Pods-UniEvents.debug.xcconfig */,
+				D583A3379D84EE00853084E0 /* Pods-UniEvents.release.xcconfig */,
+				D63A01E18F2A3874A3596935 /* Pods-UniEvents-UniEventsUITests.debug.xcconfig */,
+				CFFB86488CE1E2E3F599CAD6 /* Pods-UniEvents-UniEventsUITests.release.xcconfig */,
+				1F7B7C4A504DD3EFCC9ACC65 /* Pods-UniEventsTests.debug.xcconfig */,
+				1121A2014934EC6DEACECE5F /* Pods-UniEventsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6A5A889B2568B0D3008F9ED7 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +118,8 @@
 				6A5A88BD2568B0D4008F9ED7 /* UniEventsTests */,
 				6A5A88C82568B0D5008F9ED7 /* UniEventsUITests */,
 				6A5A88A52568B0D3008F9ED7 /* Products */,
+				64C1D7547F75CF6C5E6E9BF5 /* Pods */,
+				B66EBB1F2B42AC2D84FAAC39 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,10 +138,10 @@
 			children = (
 				6A5A88A72568B0D3008F9ED7 /* AppDelegate.swift */,
 				6A5A88A92568B0D3008F9ED7 /* SceneDelegate.swift */,
-				6A5A88AB2568B0D3008F9ED7 /* LoginViewController.swift */,
-				6A5A88AD2568B0D3008F9ED7 /* Main.storyboard */,
+				CD74FD012570642C00617193 /* Constants.swift */,
+				CD74FCF3257061F300617193 /* Controllers */,
+				CD74FCE9257061DC00617193 /* Storyboards */,
 				6A5A88B02568B0D4008F9ED7 /* Assets.xcassets */,
-				6A5A88B22568B0D4008F9ED7 /* LaunchScreen.storyboard */,
 				6A5A88B52568B0D4008F9ED7 /* Info.plist */,
 			);
 			path = UniEvents;
@@ -131,6 +165,34 @@
 			path = UniEventsUITests;
 			sourceTree = "<group>";
 		};
+		B66EBB1F2B42AC2D84FAAC39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D100F41DF05FE41788D69F13 /* Pods_UniEvents.framework */,
+				153B538D7F940E0FE408A0E7 /* Pods_UniEvents_UniEventsUITests.framework */,
+				F4B607ED273EAA0919CBC7D0 /* Pods_UniEventsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD74FCE9257061DC00617193 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6A5A88AD2568B0D3008F9ED7 /* Main.storyboard */,
+				6A5A88B22568B0D4008F9ED7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CD74FCF3257061F300617193 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6A5A88AB2568B0D3008F9ED7 /* LoginViewController.swift */,
+				CD74FCFC2570622200617193 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A5A88CE2568B0D5008F9ED7 /* Build configuration list for PBXNativeTarget "UniEvents" */;
 			buildPhases = (
+				2CCA4E6BBA880FE2B1A62FED /* [CP] Check Pods Manifest.lock */,
 				6A5A88A02568B0D3008F9ED7 /* Sources */,
 				6A5A88A12568B0D3008F9ED7 /* Frameworks */,
 				6A5A88A22568B0D3008F9ED7 /* Resources */,
+				8A31BB97B6D7B846B71FE9B6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +219,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A5A88D12568B0D5008F9ED7 /* Build configuration list for PBXNativeTarget "UniEventsTests" */;
 			buildPhases = (
+				7392E0D56DF3E3D303069DAB /* [CP] Check Pods Manifest.lock */,
 				6A5A88B62568B0D4008F9ED7 /* Sources */,
 				6A5A88B72568B0D4008F9ED7 /* Frameworks */,
 				6A5A88B82568B0D4008F9ED7 /* Resources */,
@@ -173,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A5A88D42568B0D5008F9ED7 /* Build configuration list for PBXNativeTarget "UniEventsUITests" */;
 			buildPhases = (
+				CBF7C579963BE7EE5BE66439 /* [CP] Check Pods Manifest.lock */,
 				6A5A88C12568B0D5008F9ED7 /* Sources */,
 				6A5A88C22568B0D5008F9ED7 /* Frameworks */,
 				6A5A88C32568B0D5008F9ED7 /* Resources */,
+				9C810F5C0E1A473164C10472 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,11 +324,116 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2CCA4E6BBA880FE2B1A62FED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UniEvents-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7392E0D56DF3E3D303069DAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UniEventsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A31BB97B6D7B846B71FE9B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UniEvents/Pods-UniEvents-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UniEvents/Pods-UniEvents-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UniEvents/Pods-UniEvents-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C810F5C0E1A473164C10472 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UniEvents-UniEventsUITests/Pods-UniEvents-UniEventsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UniEvents-UniEventsUITests/Pods-UniEvents-UniEventsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UniEvents-UniEventsUITests/Pods-UniEvents-UniEventsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBF7C579963BE7EE5BE66439 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UniEvents-UniEventsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6A5A88A02568B0D3008F9ED7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD74FD022570642C00617193 /* Constants.swift in Sources */,
+				CD74FCFD2570622200617193 /* HomeViewController.swift in Sources */,
 				6A5A88AC2568B0D3008F9ED7 /* LoginViewController.swift in Sources */,
 				6A5A88A82568B0D3008F9ED7 /* AppDelegate.swift in Sources */,
 				6A5A88AA2568B0D3008F9ED7 /* SceneDelegate.swift in Sources */,
@@ -437,6 +609,7 @@
 		};
 		6A5A88CF2568B0D5008F9ED7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DCAD232C3AA426A82F163D0 /* Pods-UniEvents.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -456,6 +629,7 @@
 		};
 		6A5A88D02568B0D5008F9ED7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D583A3379D84EE00853084E0 /* Pods-UniEvents.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +649,7 @@
 		};
 		6A5A88D22568B0D5008F9ED7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F7B7C4A504DD3EFCC9ACC65 /* Pods-UniEventsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +672,7 @@
 		};
 		6A5A88D32568B0D5008F9ED7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1121A2014934EC6DEACECE5F /* Pods-UniEventsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +695,7 @@
 		};
 		6A5A88D52568B0D5008F9ED7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D63A01E18F2A3874A3596935 /* Pods-UniEvents-UniEventsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +716,7 @@
 		};
 		6A5A88D62568B0D5008F9ED7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFFB86488CE1E2E3F599CAD6 /* Pods-UniEvents-UniEventsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
