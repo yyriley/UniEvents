@@ -31,17 +31,18 @@ class LoginViewController: UIViewController {
         let user = PFUser()
         user.password = password
         user.email = email
+        user.username = email
         // Ensure an email address has been entered
         let emailComponents = emailField.text?.components(separatedBy: "@")
         guard emailComponents != nil && emailComponents!.count == 2 else {
             throw SignUpError.invalidEmail
         }
+        // other fields (can be set just like with PFObject)
         // get username from first part of email (before the @)
-        user.username = emailComponents![0]
-        guard user.username != nil && user.username!.count > 0 else {
+        user["name"] = emailComponents![0]
+        guard user["name"] != nil && (user["name"] as! String).count > 0 else {
             throw SignUpError.invalidUsername
         }
-        // other fields (can be set just like with PFObject)
         // get school from second part of email (before the ".edu")
         // if multiple components to email second half (seperated by .) use the last
         var school = emailComponents![1].components(separatedBy: ".edu")[0]
@@ -62,6 +63,21 @@ class LoginViewController: UIViewController {
             } else {
                 // TODO: Navigate to home view
                 print("User \(user.username!) signed up.")
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }
+        }
+    }
+    
+    func login(email: String, password: String) {
+        PFUser.logInWithUsername(inBackground:email, password:password) {
+            (user: PFUser?, error: Error?) -> Void in
+            if user != nil {
+                // Do stuff after successful login.
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            } else {
+                // The login failed. Check error to see why.
+                let errorString = error!.localizedDescription
+                print(errorString)
             }
         }
     }
@@ -87,6 +103,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onLogin(_ sender: UIButton) {
+        let email = emailField.text!
+        let password = passwordField.text!
+        login(email: email, password: password)
     }
     
 }
