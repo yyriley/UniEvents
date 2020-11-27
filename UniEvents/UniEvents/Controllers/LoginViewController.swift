@@ -43,23 +43,27 @@ class LoginViewController: UIViewController {
         }
         // other fields (can be set just like with PFObject)
         // get school from second part of email (before the ".edu")
-        user["school"] = emailComponents![1].components(separatedBy: ".edu")[0]
+        // if multiple components to email second half (seperated by .) use the last
+        var school = emailComponents![1].components(separatedBy: ".edu")[0]
+        let schoolComponents = school.components(separatedBy: ".")
+        school = schoolComponents[schoolComponents.endIndex - 1]
+        user["school"] = school
         guard user["school"] != nil else {
             throw SignUpError.invalidSchoolName
         }
-        print("User \"\(user.username!)\" at \"\(user["school"]!)\" signed up.")
-//
-//        user.signUpInBackground {
-//            (succeeded: Bool, error: Error?) -> Void in
-//            if let error = error {
-//                let errorString = error.localizedDescription
-//                // Show the errorString somewhere and let the user try again.
-//                print(errorString)
-//            } else {
-//                // Hooray! Let them use the app now.
-//                print("User \(user.username) signed in.")
-//            }
-//        }
+        print("User \"\(user.username!)\" is signing up at \"\(user["school"]!)\"")
+
+        user.signUpInBackground {
+            (succeeded: Bool, error: Error?) -> Void in
+            if let error = error {
+                let errorString = error.localizedDescription
+                // Show the errorString somewhere and let the user try again.
+                print(errorString)
+            } else {
+                // TODO: Navigate to home view
+                print("User \(user.username!) signed up.")
+            }
+        }
     }
 
     @IBAction func onSignUp(_ sender: UIButton) {
@@ -80,7 +84,6 @@ class LoginViewController: UIViewController {
         } catch {
             print("Unknown error")
         }
-
     }
     
     @IBAction func onLogin(_ sender: UIButton) {
