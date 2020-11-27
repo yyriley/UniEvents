@@ -134,6 +134,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="euP-Og-GH9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0nN-31-LdZ">
+
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -148,6 +149,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calender-2389150_1280" width="1280" height="1280"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
