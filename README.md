@@ -25,11 +25,16 @@ Allows students and student leaders of clubs and organizations to create events 
 
 ### 1. User Stories
 #### Core features
-- [] User can log in/log out
-- [] User can register as student
-- [] User can see the clubs they belong to 
-- [] User can create/read events associated with a school or student org
-- [] User can view every event past/future
+- [x] User can log in
+- [] User stays logged in across restarts
+- [] User can log out
+- [x] User can register as student
+- [] User can view the clubs they belong to 
+- [] User can view events associated with their school
+- [] User can view events associated with a student org at their school
+- [] User can create events associated with their school or student org
+- [] User can create events as a leader of a student org
+- [] User can scroll to view every event past/future
 
 #### Additional features
 - [] User will see old events greyed out
@@ -215,3 +220,10 @@ Allows students and student leaders of clubs and organizations to create events 
       - (Read/GET) Query all clubs at user's school
 
 <!-- - [Create basic snippets for each Parse network request] -->
+
+
+<!-- ### Video Walkthroughs
+
+Here are walkthroughs of implemented user stories:
+
+<img src='unievents1.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' /> -->
