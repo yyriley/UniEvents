@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="X27-6k-dxZ">
-                                <rect key="frame" x="0.0" y="327" width="414" height="242.5"/>
+                                <rect key="frame" x="8" y="327" width="398" height="242.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UniEvents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhX-Bp-5WL">
-                                        <rect key="frame" x="91.5" y="0.0" width="231.5" height="57.5"/>
+                                        <rect key="frame" x="83.5" y="0.0" width="231.5" height="57.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="48"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E8N-0B-WOU">
-                                        <rect key="frame" x="8" y="86.5" width="398" height="34"/>
+                                        <rect key="frame" x="0.0" y="86.5" width="398" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtP-Ao-zez">
                                                 <rect key="frame" x="0.0" y="0.0" width="102" height="34"/>
@@ -42,7 +42,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="npJ-PN-ndn">
-                                        <rect key="frame" x="8" y="149.5" width="398" height="34"/>
+                                        <rect key="frame" x="0.0" y="149.5" width="398" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5p-My-ckk">
                                                 <rect key="frame" x="0.0" y="0.0" width="78" height="34"/>
@@ -57,39 +57,48 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="7hh-gB-sxg">
-                                        <rect key="frame" x="111" y="212.5" width="192" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="7hh-gB-sxg">
+                                        <rect key="frame" x="20" y="212.5" width="358" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oE0-Or-SOG">
-                                                <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="129" height="30"/>
                                                 <state key="normal" title="Login"/>
+                                                <connections>
+                                                    <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvs-n1-41x"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6o-mU-fQC">
-                                                <rect key="frame" x="138" y="0.0" width="54" height="30"/>
+                                                <rect key="frame" x="229" y="0.0" width="129" height="30"/>
                                                 <state key="normal" title="Sign Up"/>
+                                                <connections>
+                                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zqx-c6-ubT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="npJ-PN-ndn" secondAttribute="trailing" constant="8" id="HwT-MI-ebw"/>
-                                    <constraint firstItem="E8N-0B-WOU" firstAttribute="leading" secondItem="X27-6k-dxZ" secondAttribute="leading" constant="8" id="PP7-Kb-iQQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="E8N-0B-WOU" secondAttribute="trailing" constant="8" id="SIQ-pU-2Ts"/>
-                                    <constraint firstItem="npJ-PN-ndn" firstAttribute="leading" secondItem="X27-6k-dxZ" secondAttribute="leading" constant="8" id="ssu-Ck-nae"/>
+                                    <constraint firstAttribute="trailing" secondItem="npJ-PN-ndn" secondAttribute="trailing" id="HwT-MI-ebw"/>
+                                    <constraint firstItem="E8N-0B-WOU" firstAttribute="leading" secondItem="X27-6k-dxZ" secondAttribute="leading" id="PP7-Kb-iQQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="E8N-0B-WOU" secondAttribute="trailing" id="SIQ-pU-2Ts"/>
+                                    <constraint firstItem="7hh-gB-sxg" firstAttribute="leading" secondItem="X27-6k-dxZ" secondAttribute="leading" constant="20" id="WQz-n3-UtB"/>
+                                    <constraint firstItem="npJ-PN-ndn" firstAttribute="leading" secondItem="X27-6k-dxZ" secondAttribute="leading" id="ssu-Ck-nae"/>
+                                    <constraint firstAttribute="trailing" secondItem="7hh-gB-sxg" secondAttribute="trailing" constant="20" id="tgg-YS-DwN"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="X27-6k-dxZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WdM-oT-63U"/>
+                            <constraint firstItem="X27-6k-dxZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="WdM-oT-63U"/>
                             <constraint firstItem="X27-6k-dxZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="l3G-fS-Kzc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X27-6k-dxZ" secondAttribute="trailing" id="mcI-1w-7Cn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X27-6k-dxZ" secondAttribute="trailing" constant="8" id="mcI-1w-7Cn"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="email" destination="VBd-QY-w81" id="lgq-Vy-vCW"/>
-                        <outlet property="password" destination="cxg-6x-vBA" id="TWY-4y-08C"/>
+                        <outlet property="emailField" destination="VBd-QY-w81" id="lgq-Vy-vCW"/>
+                        <outlet property="passwordField" destination="cxg-6x-vBA" id="TWY-4y-08C"/>
+                        <segue destination="euP-Og-GH9" kind="presentation" identifier="loginSegue" id="bQj-Op-gCk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -101,7 +110,7 @@
             <objects>
                 <viewController id="F3y-3P-kNB" customClass="HomeViewController" customModule="UniEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VAl-QK-fLf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v2l-eH-ZgT">
@@ -125,7 +134,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="euP-Og-GH9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0nN-31-LdZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
