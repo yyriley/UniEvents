@@ -111,3 +111,6 @@ xcuserdata
 
 # CocoaPods
 /Pods
+
+# Private keys
+Constants.swift
