@@ -26,27 +26,27 @@ Allows students and student leaders of clubs and organizations to create events 
 ### 1. User Stories
 #### Core features
 - [x] User can log in
-- [] User stays logged in across restarts
-- [] User can log out
-- [x] User can register as student
-- [] User can view the clubs they belong to 
-- [] User can view events associated with their school
-- [] User can view events associated with a student org at their school
-- [] User can create events associated with their school or student org
-- [] User can create events as a leader of a student org
-- [] User can scroll to view every event past/future
+- [ ] User stays logged in across restarts
+- [ ] User can log out
+- [x] User can register as a student
+- [ ] User can view the clubs they belong to 
+- [ ] User can view events associated with their school
+- [ ] User can view events associated with a student org at their school
+- [ ] User can create events associated with their school or student org
+- [ ] User can create events as a leader of a student org
+- [ ] User can scroll to view every event past/future
 
 #### Additional features
-- [] User will see old events greyed out
-- [] User can view events specific to club
-- [] User can subscribe to events specific to club
-- [] User can be assigned as a leaders for a club (admin)
-- [] User can comment on posts
-- [] User can assign admins positions is they are admin
-- [] User can upload an image associated with an event if they are admin
-- [] User can upload an image associated with a club if they are admin
-- [] User is notified of upcoming events
-- [] User can search for organizations/events
+- [ ] User will see old events greyed out
+- [ ] User can view events specific to club
+- [ ] User can subscribe to events specific to club
+- [ ] User can be assigned as a leaders for a club (admin)
+- [ ] User can comment on posts
+- [ ] User can assign admins positions is they are admin
+- [ ] User can upload an image associated with an event if they are admin
+- [ ] User can upload an image associated with a club if they are admin
+- [ ] User is notified of upcoming events
+- [ ] User can search for organizations/events
 
 ### 2. Screen Archetypes
 * Login
