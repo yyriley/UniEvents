@@ -17,11 +17,11 @@
 		6A5A88BF2568B0D4008F9ED7 /* UniEventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A88BE2568B0D4008F9ED7 /* UniEventsTests.swift */; };
 		6A5A88CA2568B0D5008F9ED7 /* UniEventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A88C92568B0D5008F9ED7 /* UniEventsUITests.swift */; };
 		6A5A88DB2568B16C008F9ED7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6A5A88DA2568B16C008F9ED7 /* .gitignore */; };
+		6A7BFBA625721E0600BFCEF8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7BFBA525721E0600BFCEF8 /* Constants.swift */; };
+		6AC663982570F41000EC1DCD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC663972570F41000EC1DCD /* HomeCell.swift */; };
 		8FC43C49DB023DB3AA6EA1B3 /* Pods_UniEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D100F41DF05FE41788D69F13 /* Pods_UniEvents.framework */; };
-		CD421AD5257177DD009BB522 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD421AD4257177DD009BB522 /* Constants.swift */; };
 		CD74FCFD2570622200617193 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD74FCFC2570622200617193 /* HomeViewController.swift */; };
 		F7828CB1BA541977BCF9C48B /* Pods_UniEventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B607ED273EAA0919CBC7D0 /* Pods_UniEventsTests.framework */; };
-		6AC663982570F41000EC1DCD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC663972570F41000EC1DCD /* HomeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,15 +60,15 @@
 		6A5A88C92568B0D5008F9ED7 /* UniEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniEventsUITests.swift; sourceTree = "<group>"; };
 		6A5A88CB2568B0D5008F9ED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A5A88DA2568B16C008F9ED7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		6A7BFBA525721E0600BFCEF8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6AC663972570F41000EC1DCD /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		9DCAD232C3AA426A82F163D0 /* Pods-UniEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEvents.debug.xcconfig"; path = "Target Support Files/Pods-UniEvents/Pods-UniEvents.debug.xcconfig"; sourceTree = "<group>"; };
-		CD421AD4257177DD009BB522 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CD74FCFC2570622200617193 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CFFB86488CE1E2E3F599CAD6 /* Pods-UniEvents-UniEventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEvents-UniEventsUITests.release.xcconfig"; path = "Target Support Files/Pods-UniEvents-UniEventsUITests/Pods-UniEvents-UniEventsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D100F41DF05FE41788D69F13 /* Pods_UniEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D583A3379D84EE00853084E0 /* Pods-UniEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEvents.release.xcconfig"; path = "Target Support Files/Pods-UniEvents/Pods-UniEvents.release.xcconfig"; sourceTree = "<group>"; };
 		D63A01E18F2A3874A3596935 /* Pods-UniEvents-UniEventsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEvents-UniEventsUITests.debug.xcconfig"; path = "Target Support Files/Pods-UniEvents-UniEventsUITests/Pods-UniEvents-UniEventsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F4B607ED273EAA0919CBC7D0 /* Pods_UniEventsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniEventsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AC663972570F41000EC1DCD /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,10 +143,9 @@
 				CD74FCF3257061F300617193 /* Controllers */,
 				CD74FCE9257061DC00617193 /* Storyboards */,
 				6A5A88B02568B0D4008F9ED7 /* Assets.xcassets */,
-				CD421AD4257177DD009BB522 /* Constants.swift */,
 				6A5A88B52568B0D4008F9ED7 /* Info.plist */,
-				6AC66392256F615600EC1DCD /* HomeViewController.swift */,
 				6AC663972570F41000EC1DCD /* HomeCell.swift */,
+				6A7BFBA525721E0600BFCEF8 /* Constants.swift */,
 			);
 			path = UniEvents;
 			sourceTree = "<group>";
@@ -436,13 +435,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD421AD5257177DD009BB522 /* Constants.swift in Sources */,
 				CD74FCFD2570622200617193 /* HomeViewController.swift in Sources */,
 				6A5A88AC2568B0D3008F9ED7 /* LoginViewController.swift in Sources */,
 				6A5A88A82568B0D3008F9ED7 /* AppDelegate.swift in Sources */,
 				6A5A88AA2568B0D3008F9ED7 /* SceneDelegate.swift in Sources */,
-				6AC66393256F615600EC1DCD /* HomeViewController.swift in Sources */,
 				6AC663982570F41000EC1DCD /* HomeCell.swift in Sources */,
+				6A7BFBA625721E0600BFCEF8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
