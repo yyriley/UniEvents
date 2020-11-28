@@ -15,8 +15,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   
   override func viewDidLoad() {
         super.viewDidLoad()
-    homeTableView.dataSource = self
-    homeTableView.delegate = self
+    //homeTableView.dataSource = self
+    //homeTableView.delegate = self
 
         // Do any additional setup after loading the view.
     }
