@@ -15,15 +15,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
   
   override func viewDidLoad() {
         super.viewDidLoad()
-    //homeTableView.dataSource = self
-    //homeTableView.delegate = self
+    homeTableView.dataSource = self
+    homeTableView.delegate = self
 
         // Do any additional setup after loading the view.
     }
     
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 50
+    return 10
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
