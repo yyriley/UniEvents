@@ -19,6 +19,7 @@
 		6A5A88DB2568B16C008F9ED7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6A5A88DA2568B16C008F9ED7 /* .gitignore */; };
 		6A7BFBA625721E0600BFCEF8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7BFBA525721E0600BFCEF8 /* Constants.swift */; };
 		6A7BFBAE25739F9400BFCEF8 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7BFBAD25739F9400BFCEF8 /* ClubViewController.swift */; };
+		6A7BFBB32573BB4C00BFCEF8 /* ClubsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7BFBB22573BB4C00BFCEF8 /* ClubsFeedViewController.swift */; };
 		6AC663982570F41000EC1DCD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC663972570F41000EC1DCD /* HomeCell.swift */; };
 		8FC43C49DB023DB3AA6EA1B3 /* Pods_UniEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D100F41DF05FE41788D69F13 /* Pods_UniEvents.framework */; };
 		CD74FCFD2570622200617193 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD74FCFC2570622200617193 /* HomeViewController.swift */; };
@@ -63,6 +64,7 @@
 		6A5A88DA2568B16C008F9ED7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		6A7BFBA525721E0600BFCEF8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6A7BFBAD25739F9400BFCEF8 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
+		6A7BFBB22573BB4C00BFCEF8 /* ClubsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsFeedViewController.swift; sourceTree = "<group>"; };
 		6AC663972570F41000EC1DCD /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		9DCAD232C3AA426A82F163D0 /* Pods-UniEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEvents.debug.xcconfig"; path = "Target Support Files/Pods-UniEvents/Pods-UniEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		CD74FCFC2570622200617193 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				6A5A88AB2568B0D3008F9ED7 /* LoginViewController.swift */,
 				CD74FCFC2570622200617193 /* HomeViewController.swift */,
 				6A7BFBAD25739F9400BFCEF8 /* ClubViewController.swift */,
+				6A7BFBB22573BB4C00BFCEF8 /* ClubsFeedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				6A5A88AC2568B0D3008F9ED7 /* LoginViewController.swift in Sources */,
 				6A5A88A82568B0D3008F9ED7 /* AppDelegate.swift in Sources */,
 				6A5A88AA2568B0D3008F9ED7 /* SceneDelegate.swift in Sources */,
+				6A7BFBB32573BB4C00BFCEF8 /* ClubsFeedViewController.swift in Sources */,
 				6A7BFBAE25739F9400BFCEF8 /* ClubViewController.swift in Sources */,
 				6AC663982570F41000EC1DCD /* HomeCell.swift in Sources */,
 				6A7BFBA625721E0600BFCEF8 /* Constants.swift in Sources */,
