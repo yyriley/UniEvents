@@ -19,7 +19,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     homeTableView.delegate = self
 
         // Do any additional setup after loading the view.
-    }
+    //eventImage.layer.masksToBounds = true
+    //eventImage.layer.cornerRadius = eventImage.bounds.width / 2
+  }
     
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
