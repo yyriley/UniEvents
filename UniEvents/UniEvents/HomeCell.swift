@@ -13,6 +13,7 @@ class HomeCell: UITableViewCell {
   @IBOutlet weak var startTime: UILabel!
   @IBOutlet weak var eventName: UILabel!
   @IBOutlet weak var eventImage: UIImageView!
+  @IBOutlet weak var clubName: UILabel!
   
   override func awakeFromNib() {
         super.awakeFromNib()
