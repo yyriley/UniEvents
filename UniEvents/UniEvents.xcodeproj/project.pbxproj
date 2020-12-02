@@ -22,6 +22,7 @@
 		6A7BFBB32573BB4C00BFCEF8 /* ClubsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7BFBB22573BB4C00BFCEF8 /* ClubsFeedViewController.swift */; };
 		6AC663982570F41000EC1DCD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC663972570F41000EC1DCD /* HomeCell.swift */; };
 		8FC43C49DB023DB3AA6EA1B3 /* Pods_UniEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D100F41DF05FE41788D69F13 /* Pods_UniEvents.framework */; };
+		CD296D3925780A3100493BC6 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD296D3825780A3100493BC6 /* CreateEventViewController.swift */; };
 		CD74FCFD2570622200617193 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD74FCFC2570622200617193 /* HomeViewController.swift */; };
 		F7828CB1BA541977BCF9C48B /* Pods_UniEventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B607ED273EAA0919CBC7D0 /* Pods_UniEventsTests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		6A7BFBB22573BB4C00BFCEF8 /* ClubsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsFeedViewController.swift; sourceTree = "<group>"; };
 		6AC663972570F41000EC1DCD /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		9DCAD232C3AA426A82F163D0 /* Pods-UniEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEvents.debug.xcconfig"; path = "Target Support Files/Pods-UniEvents/Pods-UniEvents.debug.xcconfig"; sourceTree = "<group>"; };
+		CD296D3825780A3100493BC6 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		CD74FCFC2570622200617193 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CFFB86488CE1E2E3F599CAD6 /* Pods-UniEvents-UniEventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEvents-UniEventsUITests.release.xcconfig"; path = "Target Support Files/Pods-UniEvents-UniEventsUITests/Pods-UniEvents-UniEventsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D100F41DF05FE41788D69F13 /* Pods_UniEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +200,7 @@
 				CD74FCFC2570622200617193 /* HomeViewController.swift */,
 				6A7BFBAD25739F9400BFCEF8 /* ClubViewController.swift */,
 				6A7BFBB22573BB4C00BFCEF8 /* ClubsFeedViewController.swift */,
+				CD296D3825780A3100493BC6 /* CreateEventViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				6A7BFBAE25739F9400BFCEF8 /* ClubViewController.swift in Sources */,
 				6AC663982570F41000EC1DCD /* HomeCell.swift in Sources */,
 				6A7BFBA625721E0600BFCEF8 /* Constants.swift in Sources */,
+				CD296D3925780A3100493BC6 /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
