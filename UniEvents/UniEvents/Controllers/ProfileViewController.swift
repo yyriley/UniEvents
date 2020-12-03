@@ -22,8 +22,8 @@ class ProfileViewController: UIViewController {
             print("No user is currently logged in.")
             return
         }
-        usernameLabel.text = user["name"] as! String
-        schoolLabel.text = user["school"] as! String
+        usernameLabel.text = user["name"] as? String
+        schoolLabel.text = user["school"] as? String
     }
     
     @IBAction func onLogout(_ sender: UIButton) {
