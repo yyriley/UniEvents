@@ -384,10 +384,10 @@
             </objects>
             <point key="canvasLocation" x="4486.9565217391309" y="756.69642857142856"/>
         </scene>
-        <!--Events-->
+        <!--Home Navigation Controller-->
         <scene sceneID="OKQ-dk-OLh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="euP-Og-GH9" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationController" title="Home Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="euP-Og-GH9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Events" image="calendar" catalog="system" id="3Tz-Sw-hOK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0nN-31-LdZ">
