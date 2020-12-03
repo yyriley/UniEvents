@@ -27,7 +27,7 @@ Allows students and student leaders of clubs and organizations to create events 
 #### Core features
 - [x] User can log in
 - [x] User stays logged in across restarts
-- [ ] User can log out
+- [x] User can log out
 - [x] User can register as a student
 - [ ] User can view the clubs they belong to 
 - [ ] User can view events associated with their school
