@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         print("\(PFUser.current()?.username ?? "unknown") is logged in")
         // switch to feed view controller
         let main = UIStoryboard(name: "Main", bundle: nil)
-        let feedNavigationController = main.instantiateViewController(withIdentifier: "HomeNavigationController")
+        let feedNavigationController = main.instantiateViewController(withIdentifier: "TabBarController")
         window?.rootViewController = feedNavigationController
     }
   }
