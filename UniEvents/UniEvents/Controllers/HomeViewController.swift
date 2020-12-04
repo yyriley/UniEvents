@@ -58,13 +58,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+      return events.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeCell
-
-        return cell
+      let event = events[indexPath.row]
+      let name = event["name"] as! String
+      
+      cell.eventName!.text = name
+      
+      return cell
     }
     /*
     // MARK: - Navigation
