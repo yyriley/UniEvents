@@ -25,14 +25,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         guard PFUser.current() != nil else {
             return
         }
-//        user = PFUser.current()!
         user = (UserDefaults.standard.object(forKey: "user") as? PFUser)
         school = (UserDefaults.standard.object(forKey: "school") as? PFObject)
 
         // Do any additional setup after loading the view.
-        //eventImage.layer.masksToBounds = true
-        //eventImage.layer.cornerRadius = eventImage.bounds.width / 2
-    
     }
     
     override func viewDidAppear(_ animated: Bool) {
