@@ -26,8 +26,8 @@ Allows students and student leaders of clubs and organizations to create events 
 ### 1. User Stories
 #### Core features
 - [x] User can log in
-- [ ] User stays logged in across restarts
-- [ ] User can log out
+- [x] User stays logged in across restarts
+- [x] User can log out
 - [x] User can register as a student
 - [ ] User can view the clubs they belong to 
 - [ ] User can view events associated with their school
@@ -194,7 +194,7 @@ Allows students and student leaders of clubs and organizations to create events 
          query.findObjectsInBackground { (events: [PFObject]?, error: Error?) in
             if let error = error { 
                print(error.localizedDescription)
-            } else if let posts = posts {
+            } else if let events = events {
                print("Successfully retrieved \(events.count) events.")
            // TODO: Do something with events...
             }

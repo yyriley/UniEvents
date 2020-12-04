@@ -61,9 +61,26 @@ class LoginViewController: UIViewController {
                 // Show the errorString somewhere and let the user try again.
                 print(errorString)
             } else {
-                // TODO: Navigate to home view
+                UserDefaults.standard.set(user, forKey: "user")
                 print("User \(user.username!) signed up.")
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }
+        }
+    }
+    
+    func loadSchool(user: PFUser) {
+        // make parse query to get school from user
+        let schoolQuery = PFQuery(className: "School")
+        schoolQuery.limit = 1
+        schoolQuery.whereKey("shortName", equalTo: user["school"] ?? "")
+        schoolQuery.findObjectsInBackground { (schools: [PFObject]?, error: Error?) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let schools = schools {
+                print("Successfully retrieved \(schools)")
+                // TODO: Do something with events...
+                let school = schools[0]
+                UserDefaults.standard.set(school, forKey: "school")
             }
         }
     }
