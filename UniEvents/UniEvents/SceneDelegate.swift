@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     guard let _ = (scene as? UIWindowScene) else { return }
     // Check if user is logged in
-    if PFUser.current() != nil {
-        print("\(PFUser.current()?.username ?? "unknown") is logged in")
+    if let currentUser = PFUser.current() {
+        print("\(currentUser.username ?? "") is logged in")
         // switch to feed view controller
         let main = UIStoryboard(name: "Main", bundle: nil)
         let feedNavigationController = main.instantiateViewController(withIdentifier: "TabBarController")

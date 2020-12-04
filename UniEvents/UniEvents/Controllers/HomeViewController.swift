@@ -6,33 +6,70 @@
 //
 
 import UIKit
+import Parse
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-  
-  
 
-  @IBOutlet weak var homeTableView: UITableView!
-  
-  override func viewDidLoad() {
+    var user: PFUser?
+    var school: PFObject?
+    var events = [PFObject]()
+    var selectedEvent: PFObject?
+    
+    @IBOutlet weak var homeTableView: UITableView!
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
-    homeTableView.dataSource = self
-    homeTableView.delegate = self
+        homeTableView.dataSource = self
+        homeTableView.delegate = self
+        
+        guard PFUser.current() != nil else {
+            return
+        }
+//        user = PFUser.current()!
+        user = (UserDefaults.standard.object(forKey: "user") as? PFUser)
+        school = (UserDefaults.standard.object(forKey: "school") as? PFObject)
 
         // Do any additional setup after loading the view.
-    //eventImage.layer.masksToBounds = true
-    //eventImage.layer.cornerRadius = eventImage.bounds.width / 2
-  }
+        //eventImage.layer.masksToBounds = true
+        //eventImage.layer.cornerRadius = eventImage.bounds.width / 2
+    
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        self.title = self.school?["longName"] as? String ?? self.school?["shortName"] as? String ?? "?"
+        self.loadEvents()
+    }
+    
+    func loadEvents() {
+        // make parse query to get event posts
+        // then reload table view
+        let query = PFQuery(className:"Event")
+        query.limit = 20
+        query.whereKey("school", equalTo: school ?? "")
+//        query.order(byDescending: "startTime")
+        query.findObjectsInBackground { (events: [PFObject]?, error: Error?) in
+           if let error = error {
+              print(error.localizedDescription)
+           } else if let events = events {
+              print("Successfully retrieved \(events.count) events.")
+          // TODO: Do something with events...
+            self.events = events
+            self.homeTableView.reloadData()
+           }
+        }
+    }
     
 
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeCell
-    
-    return cell
-  }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeCell
+
+        return cell
+    }
     /*
     // MARK: - Navigation
 
