@@ -24,6 +24,9 @@
 		8FC43C49DB023DB3AA6EA1B3 /* Pods_UniEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D100F41DF05FE41788D69F13 /* Pods_UniEvents.framework */; };
 		CD11863025797A4200C56F04 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11862F25797A4200C56F04 /* ProfileViewController.swift */; };
 		CD296D3925780A3100493BC6 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD296D3825780A3100493BC6 /* CreateEventViewController.swift */; };
+		CD451A64257A0A670056F730 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD451A63257A0A670056F730 /* Event.swift */; };
+		CD451A6D257A0B850056F730 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD451A6C257A0B850056F730 /* User.swift */; };
+		CD451A72257A0BCC0056F730 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD451A71257A0BCC0056F730 /* School.swift */; };
 		CD74FCFD2570622200617193 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD74FCFC2570622200617193 /* HomeViewController.swift */; };
 		F7828CB1BA541977BCF9C48B /* Pods_UniEventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B607ED273EAA0919CBC7D0 /* Pods_UniEventsTests.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +74,9 @@
 		9DCAD232C3AA426A82F163D0 /* Pods-UniEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEvents.debug.xcconfig"; path = "Target Support Files/Pods-UniEvents/Pods-UniEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		CD11862F25797A4200C56F04 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CD296D3825780A3100493BC6 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		CD451A63257A0A670056F730 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		CD451A6C257A0B850056F730 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CD451A71257A0BCC0056F730 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		CD74FCFC2570622200617193 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CFFB86488CE1E2E3F599CAD6 /* Pods-UniEvents-UniEventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEvents-UniEventsUITests.release.xcconfig"; path = "Target Support Files/Pods-UniEvents-UniEventsUITests/Pods-UniEvents-UniEventsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D100F41DF05FE41788D69F13 /* Pods_UniEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +152,7 @@
 		6A5A88A62568B0D3008F9ED7 /* UniEvents */ = {
 			isa = PBXGroup;
 			children = (
+				CD451A62257A0A590056F730 /* Models */,
 				6A5A88A72568B0D3008F9ED7 /* AppDelegate.swift */,
 				6A5A88A92568B0D3008F9ED7 /* SceneDelegate.swift */,
 				CD74FCF3257061F300617193 /* Controllers */,
@@ -184,6 +191,16 @@
 				F4B607ED273EAA0919CBC7D0 /* Pods_UniEventsTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD451A62257A0A590056F730 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD451A63257A0A670056F730 /* Event.swift */,
+				CD451A6C257A0B850056F730 /* User.swift */,
+				CD451A71257A0BCC0056F730 /* School.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CD74FCE9257061DC00617193 /* Storyboards */ = {
@@ -448,14 +465,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD74FCFD2570622200617193 /* HomeViewController.swift in Sources */,
+				CD451A64257A0A670056F730 /* Event.swift in Sources */,
 				6A5A88AC2568B0D3008F9ED7 /* LoginViewController.swift in Sources */,
 				CD11863025797A4200C56F04 /* ProfileViewController.swift in Sources */,
 				6A5A88A82568B0D3008F9ED7 /* AppDelegate.swift in Sources */,
 				6A5A88AA2568B0D3008F9ED7 /* SceneDelegate.swift in Sources */,
 				6A7BFBB32573BB4C00BFCEF8 /* ClubsFeedViewController.swift in Sources */,
 				6A7BFBAE25739F9400BFCEF8 /* ClubViewController.swift in Sources */,
+				CD451A6D257A0B850056F730 /* User.swift in Sources */,
 				6AC663982570F41000EC1DCD /* HomeCell.swift in Sources */,
 				6A7BFBA625721E0600BFCEF8 /* Constants.swift in Sources */,
+				CD451A72257A0BCC0056F730 /* School.swift in Sources */,
 				CD296D3925780A3100493BC6 /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

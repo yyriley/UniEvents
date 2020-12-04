@@ -194,7 +194,7 @@ Allows students and student leaders of clubs and organizations to create events 
          query.findObjectsInBackground { (events: [PFObject]?, error: Error?) in
             if let error = error { 
                print(error.localizedDescription)
-            } else if let posts = posts {
+            } else if let events = events {
                print("Successfully retrieved \(events.count) events.")
            // TODO: Do something with events...
             }
