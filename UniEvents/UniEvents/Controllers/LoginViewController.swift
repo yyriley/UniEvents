@@ -17,6 +17,8 @@ enum SignUpError: Error {
 }
 
 class LoginViewController: UIViewController {
+    
+    var user: PFUser!
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -28,7 +30,7 @@ class LoginViewController: UIViewController {
     
     // method to sign up throws an error if given an invalid parameter
     func signUp(email: String, password: String) throws {
-        let user = PFUser()
+        user = PFUser()
         user.password = password
         user.email = email
         user.username = email
@@ -45,15 +47,24 @@ class LoginViewController: UIViewController {
         }
         // get school from second part of email (before the ".edu")
         // if multiple components to email second half (seperated by .) use the last
-        var school = emailComponents![1].components(separatedBy: ".edu")[0]
-        let schoolComponents = school.components(separatedBy: ".")
-        school = schoolComponents[schoolComponents.endIndex - 1]
-        user["school"] = school
-        guard user["school"] != nil else {
+        var schoolShortName = emailComponents![1].components(separatedBy: ".edu")[0]
+        let schoolComponents = schoolShortName.components(separatedBy: ".")
+        schoolShortName = schoolComponents[schoolComponents.endIndex - 1]
+        
+        guard schoolShortName.count > 0 else {
             throw SignUpError.invalidSchoolName
         }
-        print("User \"\(user.username!)\" is signing up at \"\(user["school"]!)\"")
 
+        // load school using function in School.swift
+        loadSchool(user: user, shortname: schoolShortName) { school in
+            // Save school to user
+            self.user["school"] = school
+            self.signUpInBackground(user: self.user)
+        }
+        print("User \"\(user.username!)\" is signing up at \"\(schoolShortName)\"")
+    }
+    
+    func signUpInBackground(user: PFUser) {
         user.signUpInBackground {
             (succeeded: Bool, error: Error?) -> Void in
             if let error = error {
@@ -61,30 +72,20 @@ class LoginViewController: UIViewController {
                 // Show the errorString somewhere and let the user try again.
                 print(errorString)
             } else {
-                UserDefaults.standard.set(user, forKey: "user")
                 print("User \(user.username!) signed up.")
+                self.saveUser(user: user)
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
         }
     }
     
-    func loadSchool(user: PFUser) {
-        // make parse query to get school from user
-        let schoolQuery = PFQuery(className: "School")
-        schoolQuery.limit = 1
-        schoolQuery.whereKey("shortName", equalTo: user["school"] ?? "")
-        schoolQuery.findObjectsInBackground { (schools: [PFObject]?, error: Error?) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else if let schools = schools {
-                print("Successfully retrieved \(schools)")
-                // TODO: Do something with events...
-                let school = schools[0]
-                UserDefaults.standard.set(school, forKey: "school")
-            }
+    func saveUser(user: PFUser) {
+        user.saveInBackground { (success: Bool, error: Error?) in
+            if success { print("User saved") }
+            else { print("Error saving user") }
         }
     }
-    
+
     func login(email: String, password: String) {
         PFUser.logInWithUsername(inBackground:email, password:password) {
             (user: PFUser?, error: Error?) -> Void in
