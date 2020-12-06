@@ -66,9 +66,25 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeCell
         let event = events[indexPath.row]
-        let name = event["name"] as? String
-
-        cell.eventName!.text = name
+        
+        cell.eventName.text = event["title"] as? String
+        let host = event["host"] as! PFUser
+        host.fetchIfNeededInBackground { (host, error) in
+            if let error = error {
+                let errorString = error.localizedDescription
+                print(errorString)
+            } else {
+                cell.clubName.text = (host?["name"] as? String)?.capitalized
+            }
+        }
+        cell.location.text = event["location"] as? String
+        let startTime = event["startTime"] as? Date
+        guard startTime != nil else {
+            return cell
+        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, h:mm a"
+        cell.startTime.text = dateFormatter.string(from: startTime!)
 
         return cell
     }
