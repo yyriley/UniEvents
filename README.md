@@ -29,14 +29,14 @@ Allows students and student leaders of clubs and organizations to create events 
 - [x] User stays logged in across restarts
 - [x] User can log out
 - [x] User can register as a student
+- [x] User can view events associated with their school
+- [ ] User can create events associated with their school
 - [ ] User can view the clubs they belong to 
-- [ ] User can view events associated with their school
-- [ ] User can view events associated with a student org at their school
-- [ ] User can create events associated with their school or student org
-- [ ] User can create events as a leader of a student org
-- [ ] User can scroll to view every event past/future
+- [ ] User can view events associated with a club they belong to
 
 #### Additional features
+- [ ] User can create events as a leader of a student org
+- [ ] User can scroll to view every event past/future
 - [ ] User will see old events greyed out
 - [ ] User can view events specific to club
 - [ ] User can subscribe to events specific to club
