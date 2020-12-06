@@ -13,13 +13,12 @@ Information hub of organizations events/meetings in a specific univeristy/colleg
 Allows students and student leaders of clubs and organizations to create events and post meeting information. Connects students to their peers with similar interests and allows them to find events that fit their schedule and save them to a calendar.
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
 - **Category:** Educational/Social Networking
 - **Mobile:** This app would be primarily developed for iOS.
 - **Story:** Shows university events from clubs, organizations, and individuals at the university. Students can connect to others and post comments
 - **Market:** University Students. Users need a school email to register.
 - **Habit:** Students can use the app as often as they want to connect to others or when they are bored and looking for events to participate in with other students.
-- **Scope:** First we would start with schools that use Gmail. Then we would expand to all .edu email addresses.
+- **Scope:** Students at our schools (Texas State University and City College of San Francisco). Then we would expand to all students with .edu email addresses.
 
 ## Product Spec
 
@@ -132,7 +131,7 @@ Allows students and student leaders of clubs and organizations to create events 
    | ------------- | -------- | ------------|
    | objectId      | String   | unique id for the event post (default field) |
    | name          | String   | name of the event |
-   | author        | Pointer to User | user that created the event |
+   | host          | Pointer to User | user that created the event |
    | school        | Pointer to School | school event belongs to |
    | image         | File     | image for the event |
    | description   | String   | description of the event |
@@ -148,11 +147,12 @@ Allows students and student leaders of clubs and organizations to create events 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | objectId      | String   | unique id for the user (default field) |
-   | username      | String   | username associated with email |
+   | username      | String   | school email username |
+   | email         | String   | school email used to sign up |
+   | name          | String   | name associated with email |
    | firstName     | String   | first name of the user |
    | lastName      | String   | last name of the user |
    | image         | File     | profile image for the user |
-   | email         | String   | school email used to sign up |
    | school        | Pointer to School | school user belongs to |
 
 #### Club
@@ -170,7 +170,8 @@ Allows students and student leaders of clubs and organizations to create events 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | objectId      | String   | unique id for the school (default field) |
-   | name          | String   | name of the school |
+   | shortName     | String   | short name for the school (used in email) |
+   | longName      | String   | name of the school |
    | description   | String   | description of the school |
    | logo          | File     | school logo |
    | image         | File     | school background image for student profile page |
@@ -189,6 +190,7 @@ Allows students and student leaders of clubs and organizations to create events 
       - (Read/GET) Query all events at user's school
          ```swift
          let query = PFQuery(className:"Event")
+         query.limit = 20
          query.whereKey("school", equalTo: currentSchool)
          query.order(byDescending: "startTime")
          query.findObjectsInBackground { (events: [PFObject]?, error: Error?) in
