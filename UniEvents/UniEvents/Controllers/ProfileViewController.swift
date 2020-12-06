@@ -27,7 +27,7 @@ class ProfileViewController: UIViewController {
         do {
             try school.fetchIfNeeded()
         } catch {
-            print("error")
+            print("error getting school for user profile")
         }
         schoolLabel.text = school["longName"] as? String ?? school["shortName"] as? String ?? ""
     }
