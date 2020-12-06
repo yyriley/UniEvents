@@ -23,13 +23,14 @@ class ProfileViewController: UIViewController {
             return
         }
         usernameLabel.text = user["name"] as? String
-        let school = user["school"] as! PFObject
+        let school = user["school"] as? PFObject
+      guard let unwrappedSchool = school else {return}
         do {
-            try school.fetchIfNeeded()
+            try unwrappedSchool.fetchIfNeeded()
         } catch {
             print("error getting school for user profile")
         }
-        schoolLabel.text = school["longName"] as? String ?? school["shortName"] as? String ?? ""
+        schoolLabel.text = unwrappedSchool["longName"] as? String ?? unwrappedSchool["shortName"] as? String ?? ""
     }
     
     @IBAction func onLogout(_ sender: UIButton) {
