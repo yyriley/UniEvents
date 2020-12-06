@@ -25,8 +25,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         guard PFUser.current() != nil else {
             return
         }
-        user = (UserDefaults.standard.object(forKey: "user") as? PFUser)
-        school = (UserDefaults.standard.object(forKey: "school") as? PFObject)
+        user = PFUser.current()
+        school = user?["school"] as? PFObject
+        print("user: \(user?.username)")
+        print("school: \(school)")
 
         // Do any additional setup after loading the view.
     }
@@ -63,12 +65,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeCell
-      let event = events[indexPath.row]
-      let name = event["name"] as! String
-      
-      cell.eventName!.text = name
-      
-      return cell
+        let event = events[indexPath.row]
+        let name = event["name"] as? String
+
+        cell.eventName!.text = name
+
+        return cell
     }
     /*
     // MARK: - Navigation
