@@ -24,7 +24,7 @@ class ProfileViewController: UIViewController {
         }
         usernameLabel.text = user["name"] as? String
         let school = user["school"] as? PFObject
-      guard let unwrappedSchool = school else {return}
+        guard let unwrappedSchool = school else {return}
         do {
             try unwrappedSchool.fetchIfNeeded()
         } catch {
