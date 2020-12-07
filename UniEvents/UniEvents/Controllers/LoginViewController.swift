@@ -54,14 +54,14 @@ class LoginViewController: UIViewController {
         guard schoolShortName.count > 0 else {
             throw SignUpError.invalidSchoolName
         }
-
-        // load school using function in School.swift
-        loadSchool(user: user, shortname: schoolShortName) { school in
-            // Save school to user
+        // assign school to user using function in School.swift
+        assignSchool(user: user, shortname: schoolShortName) { school in
             self.user["school"] = school
             self.signUpInBackground(user: self.user)
         }
-        print("User \"\(user.username!)\" is signing up at \"\(schoolShortName)\"")
+        let name = user["name"]!
+//        let school = (user["school"] as! PFObject)["longName"] ?? (user["school"] as! PFObject)["shortName"]
+        print("User \"\(name)\" is signing up at \"\(schoolShortName)\"")
     }
     
     func signUpInBackground(user: PFUser) {

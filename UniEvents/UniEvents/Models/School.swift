@@ -17,6 +17,7 @@ class School {
     }
 }
 
+// create a new school Parse object
 func newSchool(user: PFUser) -> PFObject {
     let shortName = user["school"]
     let school = PFObject(className: "School")
@@ -27,7 +28,7 @@ func newSchool(user: PFUser) -> PFObject {
 // Find school in Parse database and assign to user
 // If no school object is found in database, create a new school
 // Optional completion handler to do something with the new school
-func loadSchool(user: PFUser, shortname: String, _ completion: ((_ school: Any?) -> ())?) {
+func assignSchool(user: PFUser, shortname: String, _ completion: ((_ school: Any?) -> ())?) {
     // make parse query to get school from user
     let schoolQuery = PFQuery(className: "School")
     schoolQuery.limit = 1
@@ -38,7 +39,7 @@ func loadSchool(user: PFUser, shortname: String, _ completion: ((_ school: Any?)
         } else if let schools = schools {
             let school: PFObject
             if schools.count == 0 {
-                // Creat school if not found in database
+                // Create school if not found in database
                 school = newSchool(user: user)
             } else {
                 school = schools[0]
@@ -50,5 +51,3 @@ func loadSchool(user: PFUser, shortname: String, _ completion: ((_ school: Any?)
         }
     }
 }
-
-
