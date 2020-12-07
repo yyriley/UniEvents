@@ -29,7 +29,7 @@ Allows students and student leaders of clubs and organizations to create events 
 - [x] User can log out
 - [x] User can register as a student
 - [x] User can view events associated with their school
-- [ ] User can create events associated with their school
+- [x] User can create events associated with their school
 - [ ] User can view the clubs they belong to 
 - [ ] User can view events associated with a club they belong to
 
