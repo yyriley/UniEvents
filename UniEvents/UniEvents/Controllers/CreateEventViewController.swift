@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Parse
 
 class CreateEventViewController: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var endDatePicker: UIDatePicker!
     @IBOutlet weak var startDatePicker: UIDatePicker!
     
@@ -21,11 +23,35 @@ class CreateEventViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func createEvent() {
+        let event = PFObject(className: "Event")
+        event["title"] = titleTextField.text
+        event["description"] = descriptionTextView.text
+        event["startTime"] = startDatePicker.date
+        event["endTime"] = endDatePicker.date
+        event["host"] = PFUser.current()!
+        event["location"] = locationTextField.text
+        // TODO: Refactor code to get school so it can be accessed from different view controllers
+        guard let school = PFUser.current()!["school"] as? PFObject else { return }
+        do { try school.fetchIfNeeded() }
+        catch { print("error getting school for event being created") }
+        event["school"] = school
+        event.saveInBackground { (success: Bool, error: Error?) in
+            if success {
+                print("saved event \"\(event["title"] ?? "")\"")
+            } else {
+                print("error saving event")
+            }
+        }
+    }
+    
     @IBAction func onCancel(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func onCreate(_ sender: UIButton) {
+        // TODO: Create event in database
+        createEvent()
         self.dismiss(animated: true, completion: nil)
     }
     /*
