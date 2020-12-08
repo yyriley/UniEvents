@@ -19,9 +19,18 @@ class School {
 
 // create a new school Parse object
 func newSchool(user: PFUser) -> PFObject {
+  print("In new School Function")
     let shortName = user["school"]
     let school = PFObject(className: "School")
     school["shortName"] = shortName
+  
+  school.saveInBackground { (success: Bool, error: Error?) in
+      if success {
+          print("saved event \"\(event["title"] ?? "")\"")
+      } else {
+          print("error saving event")
+      }
+  }
     return school
 }
 
@@ -40,7 +49,7 @@ func assignSchool(user: PFUser, shortname: String, _ completion: ((_ school: Any
             let school: PFObject
             if schools.count == 0 {
                 // Create school if not found in database
-                school = newSchool(user: user)
+              school = newSchool(user: user)
             } else {
                 school = schools[0]
             }
