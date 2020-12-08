@@ -60,7 +60,6 @@ class LoginViewController: UIViewController {
             self.signUpInBackground(user: self.user)
         }
         let name = user["name"]!
-//        let school = (user["school"] as! PFObject)["longName"] ?? (user["school"] as! PFObject)["shortName"]
         print("User \"\(name)\" is signing up at \"\(schoolShortName)\"")
     }
     

@@ -18,26 +18,27 @@ class School {
 }
 
 // create a new school Parse object
-func newSchool(user: PFUser) -> PFObject {
-  print("In new School Function")
-    let shortName = user["school"]
+func newSchool(shortName: String, _ completion: ((_ school: Any?) -> ())? = nil) {
     let school = PFObject(className: "School")
     school["shortName"] = shortName
   
-  school.saveInBackground { (success: Bool, error: Error?) in
-      if success {
-          print("saved event \"\(event["title"] ?? "")\"")
-      } else {
-          print("error saving event")
-      }
-  }
-    return school
+    school.saveInBackground { (success: Bool, error: Error?) in
+        if success {
+            print("saved school \"\(shortName)\"")
+            // return schools in completion handler
+            if let completion = completion {
+                completion(school)
+            }
+        } else {
+            print("error saving school")
+        }
+    }
 }
 
 // Find school in Parse database and assign to user
 // If no school object is found in database, create a new school
 // Optional completion handler to do something with the new school
-func assignSchool(user: PFUser, shortname: String, _ completion: ((_ school: Any?) -> ())?) {
+func assignSchool(user: PFUser, shortname: String, _ completion: ((_ school: Any?) -> ())? = nil) {
     // make parse query to get school from user
     let schoolQuery = PFQuery(className: "School")
     schoolQuery.limit = 1
@@ -49,13 +50,13 @@ func assignSchool(user: PFUser, shortname: String, _ completion: ((_ school: Any
             let school: PFObject
             if schools.count == 0 {
                 // Create school if not found in database
-              school = newSchool(user: user)
+                newSchool(shortName: shortname, completion)
             } else {
                 school = schools[0]
-            }
-            // return schools in completion handler
-            if let completion = completion {
-                completion(school)
+                // return school in completion handler
+                if let completion = completion {
+                    completion(school)
+                }
             }
         }
     }
