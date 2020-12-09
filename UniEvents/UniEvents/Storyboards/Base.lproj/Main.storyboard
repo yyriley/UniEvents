@@ -440,19 +440,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="leX-CX-wlJ">
-                                <rect key="frame" x="87" y="106" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="leX-CX-wlJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
+                                <color key="backgroundColor" red="1" green="0.78595371759999999" blue="0.68476231409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="HLQ-U2-PeS"/>
+                                    <constraint firstAttribute="height" constant="185" id="IaH-UT-GbF"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfc-Zs-7lj">
+                                <rect key="frame" x="20" y="164" width="217" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ADc-c9-vh9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="leX-CX-wlJ" firstAttribute="top" secondItem="ADc-c9-vh9" secondAttribute="top" id="BVN-8f-okw"/>
+                            <constraint firstItem="leX-CX-wlJ" firstAttribute="leading" secondItem="ADc-c9-vh9" secondAttribute="leading" id="djl-z3-84R"/>
+                            <constraint firstItem="leX-CX-wlJ" firstAttribute="trailing" secondItem="ADc-c9-vh9" secondAttribute="trailing" id="knM-8d-nhT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GTh-Ih-HDB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nm1-nr-g2y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2703" y="1477"/>
+            <point key="canvasLocation" x="2702.898550724638" y="1476.5625"/>
         </scene>
         <!--Events-->
         <scene sceneID="OKQ-dk-OLh">
@@ -538,6 +554,17 @@
                                     <segue destination="hxX-1N-J8J" kind="presentation" id="KNa-6z-kJ1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc3-Yb-L3S">
+                                <rect key="frame" x="167" y="561" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Create Club">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2PC-4J-F2H" kind="presentation" id="FF7-fi-5oG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7vM-JT-pT9"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -566,6 +593,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogq-uz-0EG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3585.507246376812" y="69.642857142857139"/>
+        </scene>
+        <!--Create Club View Controller-->
+        <scene sceneID="XEV-Uv-j4M">
+            <objects>
+                <viewController id="2PC-4J-F2H" customClass="CreateClubViewController" customModule="UniEvents" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wtc-kn-5vt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GDX-RA-W8x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7fq-VV-lCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4310" y="763"/>
         </scene>
     </scenes>
     <resources>
