@@ -380,30 +380,53 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iAE-Dq-3SU">
-                                            <rect key="frame" x="20" y="8" width="127" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iAE-Dq-3SU">
+                                            <rect key="frame" x="8" y="8" width="127" height="131"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="127" id="7M6-h6-poo"/>
+                                                <constraint firstAttribute="height" constant="131" id="7Rf-ob-6Yj"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="Olj-ge-2Cz"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxR-co-eiO">
-                                            <rect key="frame" x="155" y="8" width="239" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxR-co-eiO">
+                                            <rect key="frame" x="143" y="8" width="84.333333333333314" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dea-4A-B0G">
-                                            <rect key="frame" x="155" y="37" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dea-4A-B0G">
+                                            <rect key="frame" x="143" y="37" width="88" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="YxR-co-eiO" firstAttribute="leading" secondItem="iAE-Dq-3SU" secondAttribute="trailing" constant="8" symbolic="YES" id="4Qp-Nr-Po2"/>
+                                        <constraint firstItem="dea-4A-B0G" firstAttribute="leading" secondItem="iAE-Dq-3SU" secondAttribute="trailing" constant="8" symbolic="YES" id="9Cw-Sh-sJh"/>
+                                        <constraint firstItem="YxR-co-eiO" firstAttribute="top" secondItem="GFv-8P-jS4" secondAttribute="top" constant="8" id="SZc-Ss-kUM"/>
+                                        <constraint firstItem="dea-4A-B0G" firstAttribute="top" secondItem="YxR-co-eiO" secondAttribute="bottom" constant="8" id="W66-d1-xRb"/>
+                                        <constraint firstAttribute="bottom" secondItem="iAE-Dq-3SU" secondAttribute="bottom" constant="8" id="aH7-rr-BQW"/>
+                                        <constraint firstItem="iAE-Dq-3SU" firstAttribute="top" secondItem="GFv-8P-jS4" secondAttribute="top" constant="8" id="pgH-IC-NCq"/>
+                                        <constraint firstItem="iAE-Dq-3SU" firstAttribute="top" secondItem="YxR-co-eiO" secondAttribute="top" id="q7R-9x-xT7"/>
+                                        <constraint firstItem="iAE-Dq-3SU" firstAttribute="leading" secondItem="GFv-8P-jS4" secondAttribute="leading" constant="8" id="t1J-Ol-oHz"/>
+                                        <constraint firstItem="dea-4A-B0G" firstAttribute="leading" secondItem="iAE-Dq-3SU" secondAttribute="trailing" constant="8" id="uxP-nJ-kjf"/>
+                                        <constraint firstItem="YxR-co-eiO" firstAttribute="leading" secondItem="iAE-Dq-3SU" secondAttribute="trailing" constant="8" id="xQg-Bn-do4"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="clubDescription" destination="dea-4A-B0G" id="B2Y-Aq-aSq"/>
+                                    <outlet property="clubImage" destination="iAE-Dq-3SU" id="RVv-qN-QTS"/>
+                                    <outlet property="clubName" destination="YxR-co-eiO" id="9Za-os-RnA"/>
+                                    <segue destination="4KU-vw-t1H" kind="presentation" id="zDM-Yq-CXl"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" id="toM-1A-Aev"/>
+                    <connections>
+                        <outlet property="tableView" destination="wcy-lv-ocF" id="hph-0c-G52"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rYb-aS-qnI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -414,7 +437,7 @@
             <objects>
                 <viewController title="Club View Controller" id="4KU-vw-t1H" customClass="ClubViewController" customModule="UniEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8mD-si-iHT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="leX-CX-wlJ">
