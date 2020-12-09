@@ -29,6 +29,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         school = user?["school"] as? PFObject
         print("user: \(user?.username)")
         print("school: \(school)")
+      
+      
 
         // Do any additional setup after loading the view.
     }
@@ -85,6 +87,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM d, h:mm a"
         cell.startTime.text = dateFormatter.string(from: startTime!)
+      
+     
+      cell.eventImage.layer.cornerRadius = 20.0
+      
 
         return cell
     }
