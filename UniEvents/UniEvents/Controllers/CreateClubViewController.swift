@@ -9,9 +9,13 @@ import UIKit
 
 class CreateClubViewController: UIViewController {
 
-    override func viewDidLoad() {
+  @IBOutlet weak var clubNameTextField: UITextField!
+  @IBOutlet weak var clubDescriptionTextView: UITextView!
+  
+  override func viewDidLoad() {
         super.viewDidLoad()
-
+    clubDescriptionTextView!.layer.borderWidth = 1
+    
         // Do any additional setup after loading the view.
     }
     
