@@ -19,6 +19,7 @@ class CreateEventViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       titleTextField.becomeFirstResponder()
+      
       self.descriptionTextView.layer.borderColor = UIColor.lightGray.cgColor
       self.descriptionTextView.layer.borderWidth = 1
       self.descriptionTextView.layer.cornerRadius = 5.0

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class CreateClubViewController: UIViewController {
 
@@ -18,6 +19,32 @@ class CreateClubViewController: UIViewController {
     
         // Do any additional setup after loading the view.
     }
+  
+  func createClub() {
+      let club = PFObject(className: "Club")
+      club["name"] = clubNameTextField.text
+      club["description"] = clubDescriptionTextView.text
+      
+   
+      club.saveInBackground { (success: Bool, error: Error?) in
+          if success {
+              print("saved event \"\(club["name"] ?? "")\"")
+          } else {
+              print("error creating club")
+          }
+      }
+  }
+  
+  @IBAction func onCancel(_ sender: UIButton) {
+    self.dismiss(animated: true, completion: nil)
+  }
+  
+  
+  @IBAction func onCreate(_ sender: UIButton) {
+    createClub()
+    self.dismiss(animated: true, completion: nil)
+  }
+ 
     
 
     /*

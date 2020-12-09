@@ -11,6 +11,8 @@ class ClubsFeedViewController: UIViewController, UITableViewDelegate, UITableVie
   
   @IBOutlet var tableView: UITableView!
   
+  
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
