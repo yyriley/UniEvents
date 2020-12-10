@@ -19,6 +19,7 @@ enum SignUpError: Error {
 class LoginViewController: UIViewController {
     
     var user: PFUser!
+//    var userSchool: School!
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -29,6 +30,7 @@ class LoginViewController: UIViewController {
     }
     
     // method to sign up throws an error if given an invalid parameter
+    // save school to user defaults
     func signUp(email: String, password: String) throws {
         user = PFUser()
         user.password = password
@@ -57,6 +59,8 @@ class LoginViewController: UIViewController {
         // assign school to user using function in School.swift
         assignSchool(user: user, shortname: schoolShortName) { school in
             self.user["school"] = school
+            let userSchool = School(school: school as! PFObject)
+            saveSchool(school: userSchool)
             self.signUpInBackground(user: self.user)
         }
         let name = user["name"]!
@@ -90,7 +94,11 @@ class LoginViewController: UIViewController {
             (user: PFUser?, error: Error?) -> Void in
             if user != nil {
                 // Do stuff after successful login.
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                // save school to user defaults
+                if let school = currentSchool() {
+                    saveSchool(school: school)
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                }
             } else {
                 // The login failed. Check error to see why.
                 let errorString = error!.localizedDescription
