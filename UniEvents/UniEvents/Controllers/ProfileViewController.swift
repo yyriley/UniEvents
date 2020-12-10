@@ -24,10 +24,10 @@ class ProfileViewController: UIViewController {
         }
         usernameLabel.text = user["name"] as? String
         schoolLabel.text = loadSchool()?.name
-//        guard let school = user["school"] as? PFObject else { return }
-//        do { try school.fetchIfNeeded() }
-//        catch { print("error getting school for user profile") }
-//        schoolLabel.text = school["longName"] as? String ?? school["shortName"] as? String
+        guard let school = user["school"] as? PFObject else { return }
+        do { try school.fetchIfNeeded() }
+        catch { print("error getting school for user profile") }
+        schoolLabel.text = school["longName"] as? String ?? school["shortName"] as? String
     }
     
     @IBAction func onLogout(_ sender: UIButton) {

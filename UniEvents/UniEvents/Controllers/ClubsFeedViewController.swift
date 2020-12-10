@@ -13,7 +13,6 @@ class ClubsFeedViewController: UIViewController, UITableViewDelegate, UITableVie
   @IBOutlet var tableView: UITableView!
   
   var clubs = [PFObject]()
-  
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,10 +54,8 @@ class ClubsFeedViewController: UIViewController, UITableViewDelegate, UITableVie
     
     cell.clubImage.layer.cornerRadius = 20.0
   
-
     return cell
   }
-
     /*
     // MARK: - Navigation
 
