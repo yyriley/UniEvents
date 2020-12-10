@@ -121,7 +121,7 @@
             </objects>
             <point key="canvasLocation" x="1000.0000000000001" y="69.642857142857139"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Events-->
         <scene sceneID="nwc-77-jHi">
             <objects>
                 <viewController id="F3y-3P-kNB" customClass="HomeViewController" customModule="UniEvents" customModuleProvider="target" sceneMemberID="viewController">
@@ -146,7 +146,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender-2389150" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GEn-EE-cak">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender-128" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GEn-EE-cak">
                                                     <rect key="frame" x="8" y="8" width="130" height="130"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="130" id="Wzu-aj-loE"/>
@@ -222,7 +222,7 @@
                             <constraint firstItem="v2l-eH-ZgT" firstAttribute="top" secondItem="VAl-QK-fLf" secondAttribute="top" id="zbD-Ca-rzh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="C2M-te-Vby"/>
+                    <navigationItem key="navigationItem" title="Events" id="XNM-kr-K0U"/>
                     <connections>
                         <outlet property="homeTableView" destination="v2l-eH-ZgT" id="hKU-eN-UlI"/>
                     </connections>
@@ -360,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nyh-bN-ntF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3585.507246376812" y="763.39285714285711"/>
+            <point key="canvasLocation" x="3586" y="1477"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bkh-59-0Mi">
@@ -381,7 +381,7 @@
             </objects>
             <point key="canvasLocation" x="2342" y="-660"/>
         </scene>
-        <!--Clubs Feed View Controller-->
+        <!--Clubs-->
         <scene sceneID="kwt-qv-c16">
             <objects>
                 <viewController id="xRV-1r-Cj3" customClass="ClubsFeedViewController" customModule="UniEvents" customModuleProvider="target" sceneMemberID="viewController">
@@ -397,39 +397,36 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iAE-Dq-3SU">
-                                            <rect key="frame" x="8" y="8" width="127" height="131"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender-128" translatesAutoresizingMaskIntoConstraints="NO" id="iAE-Dq-3SU">
+                                            <rect key="frame" x="8" y="8" width="128" height="131"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="127" id="7M6-h6-poo"/>
-                                                <constraint firstAttribute="height" constant="131" id="7Rf-ob-6Yj"/>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="Olj-ge-2Cz"/>
+                                                <constraint firstAttribute="width" constant="128" id="7M6-h6-poo"/>
+                                                <constraint firstAttribute="height" constant="128" id="7Rf-ob-6Yj"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxR-co-eiO">
-                                            <rect key="frame" x="143" y="8" width="84.333333333333314" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="144" y="8" width="262" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dea-4A-B0G">
-                                            <rect key="frame" x="143" y="37" width="243" height="20.333333333333329"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="144" y="37" width="262" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="YxR-co-eiO" firstAttribute="leading" secondItem="iAE-Dq-3SU" secondAttribute="trailing" constant="8" symbolic="YES" id="4Qp-Nr-Po2"/>
-                                        <constraint firstItem="dea-4A-B0G" firstAttribute="leading" secondItem="iAE-Dq-3SU" secondAttribute="trailing" constant="8" symbolic="YES" id="9Cw-Sh-sJh"/>
-                                        <constraint firstItem="YxR-co-eiO" firstAttribute="top" secondItem="GFv-8P-jS4" secondAttribute="top" constant="8" id="SZc-Ss-kUM"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="dea-4A-B0G" secondAttribute="trailing" constant="8" id="UUd-hq-xF5"/>
-                                        <constraint firstItem="dea-4A-B0G" firstAttribute="top" secondItem="YxR-co-eiO" secondAttribute="bottom" constant="8" id="W66-d1-xRb"/>
-                                        <constraint firstAttribute="bottom" secondItem="iAE-Dq-3SU" secondAttribute="bottom" constant="8" id="aH7-rr-BQW"/>
-                                        <constraint firstItem="iAE-Dq-3SU" firstAttribute="top" secondItem="GFv-8P-jS4" secondAttribute="top" constant="8" id="pgH-IC-NCq"/>
-                                        <constraint firstItem="iAE-Dq-3SU" firstAttribute="top" secondItem="YxR-co-eiO" secondAttribute="top" id="q7R-9x-xT7"/>
-                                        <constraint firstItem="iAE-Dq-3SU" firstAttribute="leading" secondItem="GFv-8P-jS4" secondAttribute="leading" constant="8" id="t1J-Ol-oHz"/>
-                                        <constraint firstItem="dea-4A-B0G" firstAttribute="leading" secondItem="iAE-Dq-3SU" secondAttribute="trailing" constant="8" id="uxP-nJ-kjf"/>
-                                        <constraint firstItem="YxR-co-eiO" firstAttribute="leading" secondItem="iAE-Dq-3SU" secondAttribute="trailing" constant="8" id="xQg-Bn-do4"/>
+                                        <constraint firstItem="iAE-Dq-3SU" firstAttribute="leading" secondItem="GFv-8P-jS4" secondAttribute="leading" constant="8" id="1s2-D8-n3h"/>
+                                        <constraint firstItem="iAE-Dq-3SU" firstAttribute="top" secondItem="GFv-8P-jS4" secondAttribute="top" constant="8" id="3ki-m9-nMI"/>
+                                        <constraint firstItem="dea-4A-B0G" firstAttribute="leading" secondItem="iAE-Dq-3SU" secondAttribute="trailing" constant="8" id="Au0-zZ-VnH"/>
+                                        <constraint firstItem="YxR-co-eiO" firstAttribute="leading" secondItem="iAE-Dq-3SU" secondAttribute="trailing" constant="8" id="FpY-Lo-QTK"/>
+                                        <constraint firstAttribute="trailing" secondItem="dea-4A-B0G" secondAttribute="trailing" constant="8" id="L38-aC-gzd"/>
+                                        <constraint firstAttribute="bottom" secondItem="iAE-Dq-3SU" secondAttribute="bottom" constant="8" id="Utf-mS-BoH"/>
+                                        <constraint firstAttribute="trailing" secondItem="YxR-co-eiO" secondAttribute="trailing" constant="8" id="cwp-t1-1ax"/>
+                                        <constraint firstItem="dea-4A-B0G" firstAttribute="top" secondItem="YxR-co-eiO" secondAttribute="bottom" constant="8" id="czi-PP-RRW"/>
+                                        <constraint firstItem="YxR-co-eiO" firstAttribute="top" secondItem="GFv-8P-jS4" secondAttribute="top" constant="8" id="wzE-rA-saX"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -441,7 +438,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" id="toM-1A-Aev"/>
+                    <navigationItem key="navigationItem" title="Clubs" id="QRr-nb-zLW"/>
                     <connections>
                         <outlet property="tableView" destination="wcy-lv-ocF" id="hph-0c-G52"/>
                     </connections>
@@ -632,7 +629,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogq-uz-0EG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3585.507246376812" y="69.642857142857139"/>
+            <point key="canvasLocation" x="3586" y="763"/>
         </scene>
         <!--Create Club View Controller-->
         <scene sceneID="XEV-Uv-j4M">
@@ -716,12 +713,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fq-VV-lCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4307.2463768115949" y="762.72321428571422"/>
+            <point key="canvasLocation" x="4475" y="1477"/>
         </scene>
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="calender-2389150" width="1920" height="1920"/>
+        <image name="calender-128" width="128" height="128"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="person.and.person.fill" catalog="system" width="128" height="80"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
