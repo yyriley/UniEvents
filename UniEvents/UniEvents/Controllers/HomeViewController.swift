@@ -26,7 +26,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             return
         }
         user = PFUser.current()
-        school = user?["school"] as? PFObject
+        school = currentSchool()
         print("user: \(user?.username)")
         print("school: \(school)")
         

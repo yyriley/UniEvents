@@ -30,6 +30,7 @@ class ClubsFeedViewController: UIViewController, UITableViewDelegate, UITableVie
     func loadClubs() {
         let query = PFQuery(className:"Club")
         query.limit = 20
+        query.whereKey("school", equalTo: currentSchool())
         query.findObjectsInBackground { (clubs: [PFObject]?, error: Error?) in
             if let error = error {
                 print(error.localizedDescription)
