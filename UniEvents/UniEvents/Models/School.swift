@@ -49,20 +49,19 @@ func loadSchool() -> School? {
 }
 
 // return school for current user
-func currentSchool() -> School? {
+func currentSchool() -> PFObject? {
     let user = PFUser.current()!
     guard let school = user["school"] as? PFObject else { return nil }
     do { try school.fetchIfNeeded() }
     catch { print("error getting current school") }
-    // convert to from PFObject to School object
-    return School(school: school)
+    return school
 }
 
 // create a new school Parse object
 func createNewSchool(shortName: String, _ completion: ((_ school: PFObject?) -> ())? = nil) {
     let school = PFObject(className: "School")
     school["shortName"] = shortName
-  
+    
     school.saveInBackground { (success: Bool, error: Error?) in
         if success {
             print("saved school \"\(shortName)\"")

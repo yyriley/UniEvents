@@ -671,14 +671,14 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cD-Ki-Per">
-                                <rect key="frame" x="20" y="767" width="48" height="30"/>
+                                <rect key="frame" x="20" y="758" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="onCancel:" destination="2PC-4J-F2H" eventType="touchUpInside" id="JdQ-yZ-GzW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUc-oF-0Oc">
-                                <rect key="frame" x="160" y="500" width="94" height="30"/>
+                                <rect key="frame" x="307" y="758" width="87" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Create Club">
                                     <color key="titleColor" systemColor="labelColor"/>
@@ -693,16 +693,15 @@
                         <constraints>
                             <constraint firstItem="GDX-RA-W8x" firstAttribute="trailing" secondItem="oMe-9r-vNV" secondAttribute="trailing" constant="8" id="6dj-2q-Xib"/>
                             <constraint firstItem="1zo-2A-EI6" firstAttribute="leading" secondItem="GDX-RA-W8x" secondAttribute="leading" constant="8" id="8ET-hI-gWA"/>
+                            <constraint firstItem="GDX-RA-W8x" firstAttribute="trailing" secondItem="bUc-oF-0Oc" secondAttribute="trailing" constant="20" id="Im3-uz-p1b"/>
                             <constraint firstItem="oMe-9r-vNV" firstAttribute="top" secondItem="1cT-NG-Qmm" secondAttribute="bottom" constant="20" id="M7D-du-APw"/>
-                            <constraint firstItem="bUc-oF-0Oc" firstAttribute="leading" secondItem="GDX-RA-W8x" secondAttribute="leading" constant="160" id="Tda-Yw-tyu"/>
-                            <constraint firstItem="GDX-RA-W8x" firstAttribute="trailing" secondItem="bUc-oF-0Oc" secondAttribute="trailing" constant="160" id="Vz1-iU-emL"/>
-                            <constraint firstItem="GDX-RA-W8x" firstAttribute="bottom" secondItem="8cD-Ki-Per" secondAttribute="bottom" constant="11" id="XaK-Rh-d7X"/>
+                            <constraint firstItem="GDX-RA-W8x" firstAttribute="bottom" secondItem="8cD-Ki-Per" secondAttribute="bottom" constant="20" id="XaK-Rh-d7X"/>
                             <constraint firstItem="GDX-RA-W8x" firstAttribute="trailing" secondItem="1zo-2A-EI6" secondAttribute="trailing" constant="8" id="a6o-CV-K5S"/>
                             <constraint firstItem="GDX-RA-W8x" firstAttribute="trailing" secondItem="1cT-NG-Qmm" secondAttribute="trailing" constant="8" id="at2-Bs-tuT"/>
                             <constraint firstItem="IRs-MG-Y50" firstAttribute="leading" secondItem="GDX-RA-W8x" secondAttribute="leading" constant="8" id="bK2-IH-KOV"/>
                             <constraint firstItem="8cD-Ki-Per" firstAttribute="leading" secondItem="GDX-RA-W8x" secondAttribute="leading" constant="20" id="dAq-X9-slk"/>
-                            <constraint firstItem="bUc-oF-0Oc" firstAttribute="top" secondItem="IRs-MG-Y50" secondAttribute="bottom" constant="200" id="daa-l6-p8G"/>
                             <constraint firstItem="1zo-2A-EI6" firstAttribute="top" secondItem="GDX-RA-W8x" secondAttribute="top" constant="50" id="iUd-1u-f3N"/>
+                            <constraint firstItem="GDX-RA-W8x" firstAttribute="bottom" secondItem="bUc-oF-0Oc" secondAttribute="bottom" constant="20" id="jdO-a9-1vI"/>
                             <constraint firstItem="oMe-9r-vNV" firstAttribute="leading" secondItem="GDX-RA-W8x" secondAttribute="leading" constant="8" id="k1q-74-v4Y"/>
                             <constraint firstItem="1cT-NG-Qmm" firstAttribute="top" secondItem="1zo-2A-EI6" secondAttribute="bottom" constant="8" id="rJc-nw-h0N"/>
                             <constraint firstItem="1cT-NG-Qmm" firstAttribute="leading" secondItem="GDX-RA-W8x" secondAttribute="leading" constant="8" id="rcc-NZ-Zde"/>
