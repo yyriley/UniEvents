@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Parse
 
 class User {
     var username: String
