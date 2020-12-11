@@ -10,6 +10,8 @@ import Parse
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let dateFormatter = DateFormatter()
+    
     var user: PFUser?
     var school: PFObject?
     var events = [PFObject]()
@@ -27,8 +29,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         user = PFUser.current()
         school = currentSchool()
-//        print("user: \(user?.username)")
-//        print("school: \(school)")
+        
+        dateFormatter.dateFormat = "MMM d, h:mm a"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -79,8 +81,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         guard startTime != nil else {
             return cell
         }
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM d, h:mm a"
         cell.startTime.text = dateFormatter.string(from: startTime!)
         // Make image view a circle by rounding corners (image width is set to 128)
         // currently the default image is already a circle, this will be useful later
