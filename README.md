@@ -132,6 +132,7 @@ Allows students and student leaders of clubs and organizations to create events 
    | objectId      | String   | unique id for the event post (default field) |
    | name          | String   | name of the event |
    | host          | Pointer to User | user that created the event |
+   | club          | Pointer to Club | club hosting the event |
    | school        | Pointer to School | school event belongs to |
    | image         | File     | image for the event |
    | description   | String   | description of the event |
@@ -182,6 +183,7 @@ Allows students and student leaders of clubs and organizations to create events 
    | ------------- | -------- | ------------|
    | objectId      | String   | unique id for the club member (default field) |
    | user          | Pointer to User | user that is a member |
+   | club          | Pointer to Club | club membership is for |
    | isAdmin       | Boolean  | if member can create event posts for the club |
    | createdAt     | DateTime | date when user is made a member (default field) |
    
