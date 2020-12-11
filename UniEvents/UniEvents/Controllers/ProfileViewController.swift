@@ -13,6 +13,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var schoolLabel: UILabel!
+  
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +26,16 @@ class ProfileViewController: UIViewController {
         }
         usernameLabel.text = user["name"] as? String
         schoolLabel.text = loadSchool()?.name
-    }
+      
+      //Tap recognition on profile image
+      profileImageView.isUserInteractionEnabled = true
     
+    }
+  
+
+  
+
+  
     @IBAction func onLogout(_ sender: UIButton) {
         if let user = PFUser.current() {
             print("\(user["name"] ?? "Unknown user") logging out")
