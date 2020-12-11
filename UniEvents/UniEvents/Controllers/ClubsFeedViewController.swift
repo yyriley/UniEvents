@@ -58,9 +58,21 @@ class ClubsFeedViewController: UIViewController, UITableViewDelegate, UITableVie
         
         return cell
     }
+    
+    // MARK: - Navigation
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // switch to club view controller programatically
+        if let viewController = storyboard?.instantiateViewController(identifier: "ClubViewController") as? ClubViewController {
+            guard let school = loadSchool() else {
+                print("Can't load school for selected club in Clubs Feed")
+                return
+            }
+            viewController.club = Club(club: clubs[indexPath.row], school: school)
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
+    
     /*
-     // MARK: - Navigation
-     
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destination.
@@ -69,3 +81,4 @@ class ClubsFeedViewController: UIViewController, UITableViewDelegate, UITableVie
      */
     
 }
+

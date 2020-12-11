@@ -433,7 +433,6 @@
                                     <outlet property="clubDescription" destination="dea-4A-B0G" id="B2Y-Aq-aSq"/>
                                     <outlet property="clubImage" destination="iAE-Dq-3SU" id="RVv-qN-QTS"/>
                                     <outlet property="clubName" destination="YxR-co-eiO" id="9Za-os-RnA"/>
-                                    <segue destination="4KU-vw-t1H" kind="presentation" id="zDM-Yq-CXl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -450,23 +449,26 @@
         <!--Club View Controller-->
         <scene sceneID="Wg6-kV-8vS">
             <objects>
-                <viewController title="Club View Controller" id="4KU-vw-t1H" customClass="ClubViewController" customModule="UniEvents" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ClubViewController" title="Club View Controller" id="4KU-vw-t1H" customClass="ClubViewController" customModule="UniEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8mD-si-iHT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="leX-CX-wlJ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
-                                <color key="backgroundColor" red="1" green="0.78595371759999999" blue="0.68476231409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfc-Zs-7lj">
+                                <rect key="frame" x="8" y="320" width="398" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="leX-CX-wlJ">
+                                <rect key="frame" x="0.0" y="45.999999999999986" width="414" height="252.66666666666669"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="HLQ-U2-PeS"/>
-                                    <constraint firstAttribute="height" constant="185" id="IaH-UT-GbF"/>
+                                    <constraint firstAttribute="height" constant="256" id="PRV-Sb-K35"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfc-Zs-7lj">
-                                <rect key="frame" x="20" y="164" width="217" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UH-No-pSB">
+                                <rect key="frame" x="8" y="349" width="398" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -474,12 +476,23 @@
                         <viewLayoutGuide key="safeArea" id="ADc-c9-vh9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="leX-CX-wlJ" firstAttribute="top" secondItem="ADc-c9-vh9" secondAttribute="top" id="BVN-8f-okw"/>
-                            <constraint firstItem="leX-CX-wlJ" firstAttribute="leading" secondItem="ADc-c9-vh9" secondAttribute="leading" id="djl-z3-84R"/>
-                            <constraint firstItem="leX-CX-wlJ" firstAttribute="trailing" secondItem="ADc-c9-vh9" secondAttribute="trailing" id="knM-8d-nhT"/>
+                            <constraint firstItem="lfc-Zs-7lj" firstAttribute="top" secondItem="leX-CX-wlJ" secondAttribute="bottom" constant="20" id="8lC-5M-rfo"/>
+                            <constraint firstItem="ADc-c9-vh9" firstAttribute="trailing" secondItem="lfc-Zs-7lj" secondAttribute="trailing" constant="8" id="NeI-nB-DP1"/>
+                            <constraint firstItem="leX-CX-wlJ" firstAttribute="trailing" secondItem="ADc-c9-vh9" secondAttribute="trailing" id="a8f-ge-kIZ"/>
+                            <constraint firstItem="4UH-No-pSB" firstAttribute="top" secondItem="lfc-Zs-7lj" secondAttribute="bottom" constant="8" id="kuy-w1-ftq"/>
+                            <constraint firstItem="leX-CX-wlJ" firstAttribute="top" secondItem="ADc-c9-vh9" secondAttribute="top" id="m2v-A1-s4O"/>
+                            <constraint firstItem="lfc-Zs-7lj" firstAttribute="leading" secondItem="ADc-c9-vh9" secondAttribute="leading" constant="8" id="mug-gi-ivg"/>
+                            <constraint firstItem="ADc-c9-vh9" firstAttribute="trailing" secondItem="4UH-No-pSB" secondAttribute="trailing" constant="8" id="uqC-a1-2OE"/>
+                            <constraint firstItem="leX-CX-wlJ" firstAttribute="leading" secondItem="ADc-c9-vh9" secondAttribute="leading" id="yTW-jS-9NP"/>
+                            <constraint firstItem="4UH-No-pSB" firstAttribute="leading" secondItem="ADc-c9-vh9" secondAttribute="leading" constant="8" id="yym-M1-tCl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GTh-Ih-HDB"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="leX-CX-wlJ" id="FfW-m1-ZPp"/>
+                        <outlet property="descriptionLabel" destination="4UH-No-pSB" id="c3f-1J-UM8"/>
+                        <outlet property="nameLabel" destination="lfc-Zs-7lj" id="7sT-e7-f5L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nm1-nr-g2y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -718,8 +731,9 @@
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="calender-128" width="128" height="128"/>
+        <image name="calender-128" width="42.666667938232422" height="42.666667938232422"/>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.and.person.fill" catalog="system" width="128" height="80"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="labelColor">

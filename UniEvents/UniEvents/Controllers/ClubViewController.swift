@@ -9,10 +9,19 @@ import UIKit
 
 class ClubViewController: UIViewController {
     
+    var club: Club?
+    
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        // print(club)
+        nameLabel.text = club?.name
+        descriptionLabel.text = club?.description
     }
     
     
