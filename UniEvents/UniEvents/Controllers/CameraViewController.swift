@@ -59,7 +59,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     dismiss(animated: true, completion: nil)
   }
   
-  
+  @IBAction func onCancel(_ sender: UIButton) {
+      self.dismiss(animated: true, completion: nil)
+  }
     /*
     // MARK: - Navigation
 
