@@ -546,7 +546,7 @@
             </objects>
             <point key="canvasLocation" x="2704" y="70"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="RlQ-uP-mrA">
             <objects>
                 <viewController id="eBO-Qd-uro" customClass="ProfileViewController" customModule="UniEvents" customModuleProvider="target" sceneMemberID="viewController">
@@ -646,7 +646,7 @@
                             <constraint firstItem="wiM-XG-Rfo" firstAttribute="leading" secondItem="7vM-JT-pT9" secondAttribute="leading" id="qL8-BN-07Z"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="eXT-aO-M0z"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="eXT-aO-M0z"/>
                     <navigationItem key="navigationItem" id="L8e-Up-0AF"/>
                     <connections>
                         <outlet property="profileImageView" destination="RJs-HB-Mhx" id="syi-Qa-x6g"/>
