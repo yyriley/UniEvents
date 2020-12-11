@@ -23,10 +23,10 @@
 		6A9F8A2E257FD2F80070B459 /* ClubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9F8A2D257FD2F80070B459 /* ClubCell.swift */; };
 		6AC663982570F41000EC1DCD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC663972570F41000EC1DCD /* HomeCell.swift */; };
 		6AC671B225816F9600E5209F /* CreateClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC671B125816F9600E5209F /* CreateClubViewController.swift */; };
-		6AC6720725833CF100E5209F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC6720625833CF100E5209F /* CameraViewController.swift */; };
 		8FC43C49DB023DB3AA6EA1B3 /* Pods_UniEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D100F41DF05FE41788D69F13 /* Pods_UniEvents.framework */; };
 		CD11863025797A4200C56F04 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11862F25797A4200C56F04 /* ProfileViewController.swift */; };
 		CD296D3925780A3100493BC6 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD296D3825780A3100493BC6 /* CreateEventViewController.swift */; };
+		CD30475C2583F14000EE2BDE /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30475B2583F14000EE2BDE /* CameraViewController.swift */; };
 		CD35D2A32583DC55008F1C74 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD35D2A22583DC55008F1C74 /* EventViewController.swift */; };
 		CD451A64257A0A670056F730 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD451A63257A0A670056F730 /* Event.swift */; };
 		CD451A72257A0BCC0056F730 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD451A71257A0BCC0056F730 /* School.swift */; };
@@ -81,6 +81,7 @@
 		9DCAD232C3AA426A82F163D0 /* Pods-UniEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniEvents.debug.xcconfig"; path = "Target Support Files/Pods-UniEvents/Pods-UniEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		CD11862F25797A4200C56F04 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CD296D3825780A3100493BC6 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		CD30475B2583F14000EE2BDE /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		CD35D2A22583DC55008F1C74 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		CD451A63257A0A670056F730 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		CD451A71257A0BCC0056F730 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
@@ -144,6 +145,7 @@
 				6A5A88A52568B0D3008F9ED7 /* Products */,
 				64C1D7547F75CF6C5E6E9BF5 /* Pods */,
 				B66EBB1F2B42AC2D84FAAC39 /* Frameworks */,
+				CD3047572583F0EA00EE2BDE /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,6 +203,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD3047572583F0EA00EE2BDE /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				6AC6720625833CF100E5209F /* CameraViewController.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		CD451A62257A0A590056F730 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +233,7 @@
 		CD74FCF3257061F300617193 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CD30475B2583F14000EE2BDE /* CameraViewController.swift */,
 				6A5A88AB2568B0D3008F9ED7 /* LoginViewController.swift */,
 				CD74FCFC2570622200617193 /* HomeViewController.swift */,
 				6A7BFBAD25739F9400BFCEF8 /* ClubViewController.swift */,
@@ -486,7 +497,6 @@
 				CD74FCFD2570622200617193 /* HomeViewController.swift in Sources */,
 				CD451A64257A0A670056F730 /* Event.swift in Sources */,
 				6AC671B225816F9600E5209F /* CreateClubViewController.swift in Sources */,
-				6AC6720725833CF100E5209F /* CameraViewController.swift in Sources */,
 				6A5A88AC2568B0D3008F9ED7 /* LoginViewController.swift in Sources */,
 				CDCFEC34257C59D30040ABF9 /* Club.swift in Sources */,
 				CD11863025797A4200C56F04 /* ProfileViewController.swift in Sources */,
@@ -500,6 +510,7 @@
 				CD451A72257A0BCC0056F730 /* School.swift in Sources */,
 				CD296D3925780A3100493BC6 /* CreateEventViewController.swift in Sources */,
 				CD35D2A32583DC55008F1C74 /* EventViewController.swift in Sources */,
+				CD30475C2583F14000EE2BDE /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
