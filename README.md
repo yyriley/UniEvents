@@ -130,10 +130,11 @@ Allows students and student leaders of clubs and organizations to create events 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | objectId      | String   | unique id for the event post (default field) |
-   | name          | String   | name of the event |
+   | title         | String   | title of the event |
    | host          | Pointer to User | user that created the event |
    | club          | Pointer to Club | club hosting the event |
    | school        | Pointer to School | school event belongs to |
+   | location      | String   | location the event takes place in |
    | image         | File     | image for the event |
    | description   | String   | description of the event |
    | commentsCount | Number   | number of comments that have been posted for the event |
