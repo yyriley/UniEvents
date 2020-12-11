@@ -374,7 +374,7 @@
                     <connections>
                         <segue destination="euP-Og-GH9" kind="relationship" relationship="viewControllers" id="fzQ-i3-EgA"/>
                         <segue destination="R8T-kT-WBh" kind="relationship" relationship="viewControllers" id="xmf-Ao-Ld7"/>
-                        <segue destination="eBO-Qd-uro" kind="relationship" relationship="viewControllers" id="Dbw-gr-Ucv"/>
+                        <segue destination="ptl-ka-TfE" kind="relationship" relationship="viewControllers" id="Dbw-gr-Ucv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Dg-M6-g8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -536,7 +536,7 @@
             </objects>
             <point key="canvasLocation" x="2704" y="70"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="RlQ-uP-mrA">
             <objects>
                 <viewController id="eBO-Qd-uro" customClass="ProfileViewController" customModule="UniEvents" customModuleProvider="target" sceneMemberID="viewController">
@@ -545,15 +545,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RJs-HB-Mhx">
-                                <rect key="frame" x="87" y="65.999999999999986" width="240" height="236.66666666666669"/>
+                                <rect key="frame" x="87" y="109.99999999999999" width="240" height="236.66666666666669"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="RwX-dC-1fC"/>
                                     <constraint firstAttribute="width" constant="240" id="tNV-El-Uq5"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4lS-7x-jIU" appends="YES" id="zTI-fw-jfA"/>
+                                </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wiM-XG-Rfo">
-                                <rect key="frame" x="0.0" y="324" width="414" height="210.66666666666663"/>
+                                <rect key="frame" x="0.0" y="368" width="414" height="210.66666666666663"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lvg-hP-jXk">
                                         <rect key="frame" x="116.66666666666667" y="0.0" width="180.66666666666663" height="20.333333333333332"/>
@@ -608,7 +612,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc3-Yb-L3S">
-                                        <rect key="frame" x="163.66666666666666" y="180.66666666666669" width="87" height="30"/>
+                                        <rect key="frame" x="163.66666666666666" y="180.66666666666663" width="87" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Create Club">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -632,7 +636,6 @@
                             <constraint firstItem="wiM-XG-Rfo" firstAttribute="leading" secondItem="7vM-JT-pT9" secondAttribute="leading" id="qL8-BN-07Z"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="37i-Kn-dFq"/>
                     <navigationItem key="navigationItem" id="L8e-Up-0AF"/>
                     <connections>
                         <outlet property="profileImageView" destination="RJs-HB-Mhx" id="syi-Qa-x6g"/>
@@ -641,8 +644,38 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogq-uz-0EG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4lS-7x-jIU">
+                    <connections>
+                        <segue destination="X5F-Ql-ZAQ" kind="presentation" id="UgJ-Yp-SPY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3586" y="763"/>
+            <point key="canvasLocation" x="3523" y="773"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="SFh-Jf-N5x">
+            <objects>
+                <viewController id="X5F-Ql-ZAQ" customClass="CameraViewController" customModule="UniEvents" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dM3-Mf-XDz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7J-Lc-bCq">
+                                <rect key="frame" x="33" y="771" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="X5F-Ql-ZAQ" eventType="touchUpInside" id="lkc-sT-fUb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LIM-Wb-OcP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EfG-xg-VCK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4311.594202898551" y="772.76785714285711"/>
         </scene>
         <!--Create Club View Controller-->
         <scene sceneID="XEV-Uv-j4M">
@@ -681,8 +714,11 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cD-Ki-Per">
-                                <rect key="frame" x="20" y="758" width="48" height="30"/>
-                                <state key="normal" title="Cancel"/>
+                                <rect key="frame" x="20" y="758" width="51" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                                 <connections>
                                     <action selector="onCancel:" destination="2PC-4J-F2H" eventType="touchUpInside" id="JdQ-yZ-GzW"/>
                                 </connections>
