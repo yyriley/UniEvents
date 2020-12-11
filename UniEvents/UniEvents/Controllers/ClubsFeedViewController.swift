@@ -61,14 +61,14 @@ class ClubsFeedViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // MARK: - Navigation
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // switch to club view controller programatically
-        if let viewController = storyboard?.instantiateViewController(identifier: "ClubViewController") as? ClubViewController {
+        // switch to club detail view controller programatically
+        if let clubViewController = storyboard?.instantiateViewController(identifier: "ClubViewController") as? ClubViewController {
             guard let school = loadSchool() else {
                 print("Can't load school for selected club in Clubs Feed")
                 return
             }
-            viewController.club = Club(club: clubs[indexPath.row], school: school)
-            navigationController?.pushViewController(viewController, animated: true)
+            clubViewController.club = Club(club: clubs[indexPath.row], school: school)
+            navigationController?.pushViewController(clubViewController, animated: true)
         }
     }
     
