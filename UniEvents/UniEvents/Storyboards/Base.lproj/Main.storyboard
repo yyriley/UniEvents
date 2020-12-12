@@ -646,7 +646,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogq-uz-0EG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="4lS-7x-jIU">
                     <connections>
-                        <segue destination="X5F-Ql-ZAQ" kind="presentation" id="UgJ-Yp-SPY"/>
+                        <segue destination="X5F-Ql-ZAQ" kind="presentation" id="4cr-u9-Nbx"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -660,18 +660,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7J-Lc-bCq">
-                                <rect key="frame" x="33" y="771" width="48" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7J-Lc-bCq">
+                                <rect key="frame" x="12" y="766" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="onCancel:" destination="X5F-Ql-ZAQ" eventType="touchUpInside" id="lkc-sT-fUb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egc-fa-zaA">
+                                <rect key="frame" x="368" y="766" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onSubmitButton:" destination="X5F-Ql-ZAQ" eventType="touchUpInside" id="9ik-B9-4ZJ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.crop.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EG9-Az-M4V">
+                                <rect key="frame" x="0.0" y="20" width="414" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlj-oP-Uqe">
+                                <rect key="frame" x="160" y="449" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Camera"/>
+                                <connections>
+                                    <action selector="opemCameraButton:" destination="X5F-Ql-ZAQ" eventType="touchUpInside" id="X6T-It-bTd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btu-qV-u5t">
+                                <rect key="frame" x="141" y="498" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Photo Library"/>
+                                <connections>
+                                    <action selector="openPhotoLibraryButton:" destination="X5F-Ql-ZAQ" eventType="touchUpInside" id="HRQ-hd-aFo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LIM-Wb-OcP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LIM-Wb-OcP" firstAttribute="bottom" secondItem="J7J-Lc-bCq" secondAttribute="bottom" constant="12" id="6dg-Y1-KDL"/>
+                            <constraint firstItem="LIM-Wb-OcP" firstAttribute="bottom" secondItem="egc-fa-zaA" secondAttribute="bottom" constant="12" id="GHf-wh-vIJ"/>
+                            <constraint firstItem="LIM-Wb-OcP" firstAttribute="trailing" secondItem="egc-fa-zaA" secondAttribute="trailing" constant="12" id="YLy-qu-96S"/>
+                            <constraint firstItem="J7J-Lc-bCq" firstAttribute="leading" secondItem="LIM-Wb-OcP" secondAttribute="leading" constant="12" id="typ-ff-VzO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="EG9-Az-M4V" id="AAC-QE-4pt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EfG-xg-VCK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -693,6 +729,9 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cT-NG-Qmm">
                                 <rect key="frame" x="8" y="79" width="398" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -790,6 +829,7 @@
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.and.person.fill" catalog="system" width="128" height="80"/>
+        <image name="person.crop.square" catalog="system" width="128" height="114"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

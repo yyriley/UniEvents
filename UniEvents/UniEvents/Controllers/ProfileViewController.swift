@@ -32,10 +32,6 @@ class ProfileViewController: UIViewController {
     
     }
   
-
-  
-
-  
     @IBAction func onLogout(_ sender: UIButton) {
         if let user = PFUser.current() {
             print("\(user["name"] ?? "Unknown user") logging out")

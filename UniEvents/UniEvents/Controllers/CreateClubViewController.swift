@@ -16,8 +16,9 @@ class CreateClubViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         clubNameTextField.becomeFirstResponder()
-        clubDescriptionTextView!.layer.borderWidth = 1
-        
+      self.clubDescriptionTextView.layer.borderColor = UIColor.lightGray.cgColor
+      self.clubDescriptionTextView.layer.borderWidth = 1
+      self.clubDescriptionTextView.layer.cornerRadius = 5.0
         // Do any additional setup after loading the view.
     }
     

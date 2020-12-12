@@ -13,11 +13,13 @@ class User {
     var school: School
     var name: String?
     var email: String?
+    var image: FILE
     
-    init(username: String, school: School, name: String?, email: String?) {
+    init(username: String, school: School, name: String?, email: String?, image:FILE) {
         self.username = username
         self.school = school
         self.name = name
         self.email = email
+        self.image = image
     }
 }

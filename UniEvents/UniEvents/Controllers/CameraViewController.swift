@@ -10,25 +10,56 @@ import Parse
 
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-  @IBOutlet weak var imageView: UIImageView!
-  @IBOutlet weak var commentField: UITextField!
   
-    override func viewDidLoad() {
+  @IBOutlet weak var imageView: UIImageView!
+
+  
+  override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+
+  //Open camera if one exists
+  @IBAction func opemCameraButton(_ sender: Any) {
+    if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            var imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera;
+            imagePicker.allowsEditing = false
+      self.present(imagePicker, animated: true, completion: nil)
+        }
+  }
+  
+  //Open photo library
+  @IBAction func openPhotoLibraryButton(_ sender: Any) {
+    if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            var imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary;
+            imagePicker.allowsEditing = true
+      self.present(imagePicker, animated: true, completion: nil)
+        }
+  }
+  
+  //get chosen image and add to imageview
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    let image = info[UIImagePickerController.InfoKey.originalImage.rawValue] as! UIImage
+    imageView.image = image
+      dismiss(animated:true, completion: nil)
+  }
+  
   @IBAction func onSubmitButton(_ sender: Any) {
-    let post = PFObject(className: "User")
+    let image = PFObject(className: "User")
     
-    post["author"] = PFUser.current()!
+    image["username"] = PFUser.current()!
     
     let imageData = imageView.image!.pngData()
     let file = PFFileObject(name: "image.png", data:imageData!)
     
-    post["image"] = file
+    image["image"] = file
   
-    post.saveInBackground { (success, error) in
+    image.saveInBackground { (success, error) in
       if success {
         self.dismiss(animated: true, completion: nil)
         print("saved!")
@@ -37,27 +68,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
       }
     }
   }
-  @IBAction func onCameraButton(_ sender: Any) {
-    let picker = UIImagePickerController()
-    picker.delegate = self
-    picker.allowsEditing = true
-    if UIImagePickerController.isSourceTypeAvailable(.camera) {
-      picker.sourceType = .camera
-    } else {
-      picker.sourceType = .photoLibrary
-    }
-    present(picker, animated: true, completion: nil)
-  }
-  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-    let image = info[.editedImage] as! UIImage
-    
-    let size = CGSize(width: 300, height: 300)
-    //let scaledImage = image..imageAspectScaled(toFill: size)
-    
-    //imageView.image = scaledImage
-    
-    dismiss(animated: true, completion: nil)
-  }
+  
   
   @IBAction func onCancel(_ sender: UIButton) {
       self.dismiss(animated: true, completion: nil)
