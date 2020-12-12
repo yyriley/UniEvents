@@ -657,7 +657,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7J-Lc-bCq">
-                                <rect key="frame" x="12" y="766" width="48" height="30"/>
+                                <rect key="frame" x="20" y="758" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="onCancel:" destination="X5F-Ql-ZAQ" eventType="touchUpInside" id="lkc-sT-fUb"/>
@@ -695,10 +695,9 @@
                         <viewLayoutGuide key="safeArea" id="LIM-Wb-OcP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LIM-Wb-OcP" firstAttribute="bottom" secondItem="J7J-Lc-bCq" secondAttribute="bottom" constant="12" id="6dg-Y1-KDL"/>
-                            <constraint firstItem="LIM-Wb-OcP" firstAttribute="bottom" secondItem="egc-fa-zaA" secondAttribute="bottom" constant="12" id="GHf-wh-vIJ"/>
-                            <constraint firstItem="LIM-Wb-OcP" firstAttribute="trailing" secondItem="egc-fa-zaA" secondAttribute="trailing" constant="12" id="YLy-qu-96S"/>
-                            <constraint firstItem="J7J-Lc-bCq" firstAttribute="leading" secondItem="LIM-Wb-OcP" secondAttribute="leading" constant="12" id="typ-ff-VzO"/>
+                            <constraint firstItem="J7J-Lc-bCq" firstAttribute="leading" secondItem="LIM-Wb-OcP" secondAttribute="leading" constant="20" id="RuQ-6t-YD6"/>
+                            <constraint firstItem="LIM-Wb-OcP" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J7J-Lc-bCq" secondAttribute="trailing" symbolic="YES" id="dgK-t4-eS1"/>
+                            <constraint firstItem="LIM-Wb-OcP" firstAttribute="bottom" secondItem="J7J-Lc-bCq" secondAttribute="bottom" constant="20" id="qd5-Cu-cSk"/>
                         </constraints>
                     </view>
                     <connections>
