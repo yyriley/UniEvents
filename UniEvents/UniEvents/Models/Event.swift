@@ -17,6 +17,7 @@ class Event {
     var endTime: Date?
     var location: String?
     var club: Club?
+    var saved: Bool = false
     
     init(host: PFUser, school: School, name: String, description: String?, start: Date?, end: Date?, location: String?, club: Club?) {
         self.host = host

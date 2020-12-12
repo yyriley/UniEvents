@@ -63,7 +63,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! HomeCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell") as! EventCell
         let event = events[indexPath.row]
         
         cell.eventName.text = event["title"] as? String
